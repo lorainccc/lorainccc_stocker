@@ -126,7 +126,7 @@ get_header(); ?>
 			<div class="small-12 medium-12 large-2 columns nopadding">
 			<?php
 				echo '<div class="small-12 medium-12 large-12 columns event-date">';
-         			echo '<div class="small-12 medium-12 large-12 columns calender">';                
+         			echo '<div class="small-12 medium-12 large-12 columns calendar">';                
 				echo '<p class="stocker-month">'.$eventstartmonth.'</p>';
 				echo '<p class="stocker-day">'.$eventstartday.'</p>';
 				echo '</div>';
