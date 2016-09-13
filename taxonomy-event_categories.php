@@ -51,18 +51,18 @@ get_header(); ?>
 						'menu_class'     => 'nav-menu',
 						'theme_location' => 'left-nav',
 					) );
-				?> 
+				?>
 			</nav><!-- .main-navigation -->
 				<?php endif; ?>
-		</div> 
+		</div>
 		<?php endif; ?>
 	</div>
 	</div>
-	<div class="small-12 medium-8 large-8 columns page-container">		
+	<div class="small-12 medium-8 large-8 columns page-container">
 <div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-<?php 
+<?php
 			// get the currently queried taxonomy term, for use later in the template file
 $term = get_queried_object();
 			$args = array(
@@ -75,49 +75,49 @@ $term = get_queried_object();
 );
 $query = new WP_Query( $args );
 	if ($query->have_posts()):
-         
-    // output the term name in a heading tag                
+
+    // output the term name in a heading tag
     echo '<h1>' . $term->name . ' Events </h1>';
-			
+
 				// output the term descriptopn in a paragraph tag
      echo '<p>' . $term->description . '</p>';
 
 			// output the link to the page that contains the Category Description
 			$siteurl= get_site_url();
 			echo '<a class="button" href="'.$siteurl.'/' . $term->slug .'">'. 'Learn More</a>';
-			
-     
+
+
         // Start the Loop
-        while ( $query->have_posts() ) : $query->the_post(); 
- 
-  $starteventdate = 
+        while ( $query->have_posts() ) : $query->the_post();
+
+  $starteventdate =
 			event_meta_box_get_meta('event_start_date');
-		$starteventtime = event_meta_box_get_meta('event_start_time');  
+		$starteventtime = event_meta_box_get_meta('event_start_time');
 		$endeventdate = event_meta_box_get_meta('event_end_date');
 		$endtime = event_meta_box_get_meta('event_end_time');
-		
+
 
 										$starttimevar=strtotime($starteventtime);
 										$starttime=	date("g:i a",$starttimevar);
 										$starteventtimehours = date("G",$starttimevar);
 										$starteventtimeminutes = date("i",$starttimevar);
-		
+
           $startdate=strtotime($starteventdate);
 										$eventstartdate=date("Y-m-d",$startdate);
 										$eventstartmonth=date("M",$startdate);
                                         $eventstartmonthfull=date("F",$startdate);
 										$eventstartday =date("j",$startdate);
                                         $eventstartyear =date("Y",$startdate);
-										
+
 										$endeventtimevar=strtotime($endtime);
 										$endeventtime = date("h:i a",$endeventtimevar);
 										$endeventtimehours = date("G",$endeventtimevar);
 										$endeventtimeminutes = date("i",$endeventtimevar);
-		
+
 										$enddate=strtotime($endeventdate);
 										$endeventdate = date("Y-m-d",$enddate);
-		
-										
+
+
 		$duration = '';
 		if($endeventtimehours == 0){
 			$endeventtimehours =24;
@@ -127,27 +127,27 @@ $query = new WP_Query( $args );
 				if($durationhours == 24){
 				$duration .= '1 day';
 				}else{
-				$duration .= $durationhours.'hrs'; 
+				$duration .= $durationhours.'hrs';
 				}
 		}
 		$durationminutes = $endeventtimeminutes - $starteventtimeminutes;
 		if($durationminutes > 0){
 			$duration .= $durationminutes.'mins';
 		}
-										
-		
-$location = event_meta_box_get_meta('event_meta_box_event_location');  
+
+
+$location = event_meta_box_get_meta('event_meta_box_event_location');
 $cost = event_meta_box_get_meta('event_meta_box_ticket_price_s_');
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="small-12 medium-2 large-2 columns">
 	<?php
 			echo '<div class="small-12 medium-12 large-12 columns event-date">';
-         echo '<div class="small-12 medium-12 large-12 columns calender">';                
+         echo '<div class="small-12 medium-12 large-12 columns calendar">';
 										echo '<p class="stocker-month">'.$eventstartmonth.'</p>';
 										echo '<p class="stocker-day">'.$eventstartday.'</p>';
 						echo '</div>';
-			echo '</div>';	
+			echo '</div>';
 		?>
  </div>
 	<div class="small-12 medium-10 large-10 columns nopadding">
@@ -162,7 +162,7 @@ $cost = event_meta_box_get_meta('event_meta_box_ticket_price_s_');
           <p><?php echo 'Location: '.$location; ?></p>
         <p><?php echo 'Cost: '.$cost; ?></p>
         <p>&nbsp;</p>
- 
+
 	</header><!-- .entry-header -->
 	</div>
 	<div class="small-12 medium-12 large-12 columns nopadding">
@@ -198,19 +198,19 @@ $cost = event_meta_box_get_meta('event_meta_box_ticket_price_s_');
 <div class="column row event-list-row">
     <hr>
   </div>
-         
+
         <?php endwhile;
-            
+
 endif; // end of check for query having posts
-     
+
 // use reset postdata to restore orginal query
-wp_reset_postdata();		
-			
+wp_reset_postdata();
+
 			?>
-		
+
 	</main><!-- #main -->
 	</div><!-- #primary -->
-</div>	
-	
+</div>
+
 </div>
 <?php get_footer(); ?>
