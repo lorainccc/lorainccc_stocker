@@ -8,7 +8,7 @@
  */
 
 ?>
-<?php 
+<?php
 $whattodisplay = 'lccc-events';
 				$today = getdate();
 				$currentDay = $today['mday'];
@@ -17,7 +17,7 @@ $whattodisplay = 'lccc-events';
 				$firsteventdate ='';
     $nexteventdate ='';
 				$todaysevents = '';
-				$temp = strLen($currentDay);            
+				$temp = strLen($currentDay);
 				$twoDay = '';
 	   $nextTwoDay = '';
     if ($temp < 2){
@@ -38,34 +38,34 @@ $whattodisplay = 'lccc-events';
 				}else{
 							$nextTwoDay = $currentDay;
 				}
-		$starteventdate = 
+		$starteventdate =
 			event_meta_box_get_meta('event_start_date');
-		$starteventtime = event_meta_box_get_meta('event_start_time');  
+		$starteventtime = event_meta_box_get_meta('event_start_time');
 		$endeventdate = event_meta_box_get_meta('event_end_date');
 		$endtime = event_meta_box_get_meta('event_end_time');
-		
+
 
 										$starttimevar=strtotime($starteventtime);
 										$starttime=	date("h:i a",$starttimevar);
 										$starteventtimehours = date("G",$starttimevar);
 										$starteventtimeminutes = date("i",$starttimevar);
-		
+
           $startdate=strtotime($starteventdate);
 										$eventstartdate=date("Y-m-d",$startdate);
 										$eventstartmonth=date("M",$startdate);
                                         $eventstartmonthfull=date("F",$startdate);
 										$eventstartday =date("j",$startdate);
                                         $eventstartyear =date("Y",$startdate);
-										
+
 										$endeventtimevar=strtotime($endtime);
 										$endeventtime = date("h:i a",$endeventtimevar);
 										$endeventtimehours = date("G",$endeventtimevar);
 										$endeventtimeminutes = date("i",$endeventtimevar);
-		
+
 										$enddate=strtotime($endeventdate);
 										$endeventdate = date("Y-m-d",$enddate);
-		
-										
+
+
 		$duration = '';
 		if($endeventtimehours == 0){
 			$endeventtimehours =24;
@@ -75,20 +75,20 @@ $whattodisplay = 'lccc-events';
 				if($durationhours == 24){
 				$duration .= '1 day';
 				}else{
-				$duration .= $durationhours.'hrs'; 
+				$duration .= $durationhours.'hrs';
 				}
 		}
 		$durationminutes = $endeventtimeminutes - $starteventtimeminutes;
 		if($durationminutes > 0){
 			$duration .= $durationminutes.'mins';
 		}
-										
-		
-$location = event_meta_box_get_meta('event_meta_box_event_location');  
+
+
+$location = event_meta_box_get_meta('event_meta_box_event_location');
 $cost = event_meta_box_get_meta('event_meta_box_ticket_price_s_');
 		$bgcolor = event_meta_box_get_meta('event_meta_box_stoccker_bg_color');
-      		$ticketlink = event_meta_box_get_meta('event_meta_box_stocker_ticket_link');	
-	$eventsubheading = event_meta_box_get_meta('event_meta_box_sub_heading');	
+      		$ticketlink = event_meta_box_get_meta('event_meta_box_stocker_ticket_link');
+	$eventsubheading = event_meta_box_get_meta('event_meta_box_sub_heading');
 ?>
 <article id="post-<?php the_ID(); ?>">
     <div class="small-12 medium-12 large-12 columns">
@@ -104,11 +104,11 @@ $cost = event_meta_box_get_meta('event_meta_box_ticket_price_s_');
 	<div class="small-12 medium-2 large-2 columns">
 	<?php
 			echo '<div class="small-12 medium-12 large-12 columns event-date">';
-        echo '<div class="small-12 medium-12 large-12 columns calender">';                
+        echo '<div class="small-12 medium-12 large-12 columns calendar">';
 										echo '<p class="stocker-month">'.$eventstartmonth.'</p>';
 										echo '<p class="stocker-day">'.$eventstartday.'</p>';
 						echo '</div>';
-			echo '</div>';	
+			echo '</div>';
 		?>
  </div>
 	<div class="small-12 medium-10 large-10 columns nopadding">
@@ -119,10 +119,10 @@ $cost = event_meta_box_get_meta('event_meta_box_ticket_price_s_');
         <p><?php echo 'Date: '.$eventstartmonthfull.' '.$eventstartday.' , '.$eventstartyear; ?></p>
         <p><?php echo 'Time: '.$starttime; ?></p>
           <p><?php echo 'Location: '.$location; ?></p>
-       	<?php if($cost != ''){ ?>		
+       	<?php if($cost != ''){ ?>
 							<p><?php echo 'Cost: '.$cost; ?></p>
 							<?php } ?>
-							<?php if($ticketlink != ''){ ?>							
+							<?php if($ticketlink != ''){ ?>
 								<a href="	<?php echo $ticketlink; ?>" class="buy-ticket-link">Buy Tickets</a>
 								<?php } ?>
 		</header><!-- .entry-header -->
