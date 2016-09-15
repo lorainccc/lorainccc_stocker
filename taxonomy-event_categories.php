@@ -8,31 +8,6 @@
  */
 get_header(); ?>
 <div class="row page-content">
-<div class="small-12 medium-12 large-12 columns nopadding show-for-small-only">
-  <div class="row show-for-small-only sub-mobile-menu-row" style="background:#000;">
- <div class="small-2 columns" style="padding-top: 0.5rem;padding-left: 1.625rem;"> <span data-responsive-toggle="sub-responsive-menu" data-hide-for="medium">
-      <button class="menu-icon" type="button" data-toggle></button>
-      </span> </div>
-    <div class="small-10 columns nopadding"><h3 class="sub-mobile-menu-header" style="color:#ffffff;">Events Menu</h3></div>
-  </div>
-  <div id="sub-responsive-menu" class="show-for-small-only">
-    <ul class="vertical menu" data-drilldown data-parent-link="true">
-
-					<?php 	wp_nav_menu(array(
-													'container' => false,
-													'menu' => __( 'Drill Menu', 'textdomain' ),
-													'menu_class' => 'vertical menu',
-										'theme_location' => 'left-nav',
-													'menu_id' => 'sub-mobile-primary-menu',
-														//Recommend setting this to false, but if you need a fallback...
-													'fallback_cb' => 'lc_drill_menu_fallback',
-													'walker' => new lc_drill_menu_walker(),
-												));
-					?>
-
-    </ul>
-  </div>
-</div>
 <div class="small-12 medium-12 large-12 columns breadcrumb-container">
    <?php get_template_part( 'template-parts/content', 'breadcrumb' ); ?>
 </div>
@@ -42,7 +17,7 @@ get_header(); ?>
 <h3><?php echo bloginfo('the-title'); ?></h3>
 		</div>
 	<?php	if ( has_nav_menu( 'left-nav' ) ) : ?>
-	<div id="secondary" class="secondary">
+	<div id="secondary" class="medium-12 columns secondary nopadding">
 		<?php if ( has_nav_menu( 'left-nav' ) ) : ?>
 			<nav id="site-navigation" class="main-navigation" role="navigation">
 				<?php
@@ -58,7 +33,7 @@ get_header(); ?>
 		<?php endif; ?>
 	</div>
 	</div>
-	<div class="small-12 medium-8 large-8 columns page-container">
+	<div class="small-12 medium-8 large-8 columns">
 <div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
@@ -77,14 +52,14 @@ $query = new WP_Query( $args );
 	if ($query->have_posts()):
 
     // output the term name in a heading tag
-    echo '<h1>' . $term->name . ' Events </h1>';
+    echo '<h2>' . $term->name . ' Events </h2>';
 
 				// output the term descriptopn in a paragraph tag
      echo '<p>' . $term->description . '</p>';
 
 			// output the link to the page that contains the Category Description
 			$siteurl= get_site_url();
-			echo '<a class="button" href="'.$siteurl.'/' . $term->slug .'">'. 'Learn More</a>';
+			echo '<a href="'.$siteurl.'/' . $term->slug .'">'. 'Learn More</a>';
 
 
         // Start the Loop
@@ -98,7 +73,7 @@ $query = new WP_Query( $args );
 
 
 										$starttimevar=strtotime($starteventtime);
-										$starttime=	date("g:i a",$starttimevar);
+										$starttime=	date("h:i a",$starttimevar);
 										$starteventtimehours = date("G",$starttimevar);
 										$starteventtimeminutes = date("i",$starttimevar);
 
@@ -153,11 +128,11 @@ $cost = event_meta_box_get_meta('event_meta_box_ticket_price_s_');
 	<div class="small-12 medium-10 large-10 columns nopadding">
 	<div class="small-12 medium-12 large-12 columns nopadding">
 		<header class="entry-header">
-        <a href="<?php the_permalink();?>"><?php the_title( '<h2 class="entry-title">', '</h2>' ); ?></a>
+        <a href="<?php the_permalink();?>"><?php the_title( '<h1 class="entry-title">', '</h1>' ); ?></a>
        <div class="taxonomies">
 	<?php echo get_the_term_list( $post->ID, 'event_categories', '', ' , ' , ''); ?>
 </div>
-        <p><?php echo 'Date: '.$eventstartmonthfull.' '.$eventstartday.', '.$eventstartyear; ?></p>
+        <p><?php echo 'Date: '.$eventstartmonthfull.''.$eventstartday.' , '.$eventstartyear; ?></p>
         <p><?php echo 'Time: '.$starttime; ?></p>
           <p><?php echo 'Location: '.$location; ?></p>
         <p><?php echo 'Cost: '.$cost; ?></p>
@@ -170,7 +145,7 @@ $cost = event_meta_box_get_meta('event_meta_box_ticket_price_s_');
 		<?php
 			the_excerpt();
 		?>
-	<a class="button" href="<?php the_permalink();?>">More Information</a>
+	<a href="<?php the_permalink();?>">More Information</a>
 		<?php
 			wp_link_pages( array(
 				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'lorainccc' ),

@@ -18,7 +18,7 @@ get_header(); ?>
 <h3><?php echo bloginfo('the-title'); ?></h3>
 		</div>
 	<?php	if ( has_nav_menu( 'left-nav' ) ) : ?>
-	<div id="secondary" class="small-12 medium-12 large-12 columns secondary">
+	<div id="secondary" class="medium-12 columns secondary nopadding">
 		<?php if ( has_nav_menu( 'left-nav' ) ) : ?>
 			<nav id="site-navigation" class="main-navigation" role="navigation">
 				<?php
@@ -35,7 +35,7 @@ get_header(); ?>
 
 	</div>
 	</div>
-	<div class="small-12 medium-8 large-8 columns">		
+	<div class="small-12 medium-8 large-8 columns">
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 				<header class="page-header">
@@ -58,7 +58,7 @@ get_header(); ?>
 					endif;
 			?>
 		<?php if ( have_posts() ) : ?>
-		
+
 			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
@@ -75,9 +75,9 @@ get_header(); ?>
 		'post_status' => 'publish',
 		'order'	=> 'ASC',
 		'orderby'=> 'meta_value',
-		'meta_key' => 'event_start_date', 
+		'meta_key' => 'event_start_date',
 	);
-					
+
 					$newevents = new WP_Query($eventargs);
 					if ( $newevents->have_posts() ) :
 						while ( $newevents->have_posts() ) : $newevents->the_post();
@@ -88,7 +88,7 @@ get_header(); ?>
 				$firsteventdate ='';
     $nexteventdate ='';
 				$todaysevents = '';
-				$temp = strLen($currentDay);            
+				$temp = strLen($currentDay);
 				$twoDay = '';
 	   $nextTwoDay = '';
     if ($temp < 2){
@@ -109,34 +109,34 @@ get_header(); ?>
 				}else{
 							$nextTwoDay = $currentDay;
 				}
-		$starteventdate = 
+		$starteventdate =
 			event_meta_box_get_meta('event_start_date');
-		$starteventtime = event_meta_box_get_meta('event_start_time');  
+		$starteventtime = event_meta_box_get_meta('event_start_time');
 		$endeventdate = event_meta_box_get_meta('event_end_date');
 		$endtime = event_meta_box_get_meta('event_end_time');
-		
+
 
 										$starttimevar=strtotime($starteventtime);
 										$starttime=	date("h:i a",$starttimevar);
 										$starteventtimehours = date("G",$starttimevar);
 										$starteventtimeminutes = date("i",$starttimevar);
-		
+
           $startdate=strtotime($starteventdate);
 										$eventstartdate=date("Y-m-d",$startdate);
 										$eventstartmonth=date("M",$startdate);
                                         $eventstartmonthfull=date("F",$startdate);
 										$eventstartday =date("j",$startdate);
                                         $eventstartyear =date("Y",$startdate);
-										
+
 										$endeventtimevar=strtotime($endtime);
 										$endeventtime = date("h:i a",$endeventtimevar);
 										$endeventtimehours = date("G",$endeventtimevar);
 										$endeventtimeminutes = date("i",$endeventtimevar);
-		
+
 										$enddate=strtotime($endeventdate);
 										$endeventdate = date("Y-m-d",$enddate);
-		
-										
+
+
 		$duration = '';
 		if($endeventtimehours == 0){
 			$endeventtimehours =24;
@@ -146,27 +146,27 @@ get_header(); ?>
 				if($durationhours == 24){
 				$duration .= '1 day';
 				}else{
-				$duration .= $durationhours.'hrs'; 
+				$duration .= $durationhours.'hrs';
 				}
 		}
 		$durationminutes = $endeventtimeminutes - $starteventtimeminutes;
 		if($durationminutes > 0){
 			$duration .= $durationminutes.'mins';
 		}
-										
-		
-$location = event_meta_box_get_meta('event_meta_box_event_location');  
+
+
+$location = event_meta_box_get_meta('event_meta_box_event_location');
 $cost = event_meta_box_get_meta('event_meta_box_ticket_price_s_');
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="small-12 medium-2 large-2 columns">
 	<?php
 			echo '<div class="small-12 medium-12 large-12 columns event-date">';
-         echo '<div class="small-12 medium-12 large-12 columns calendar">';                
+         echo '<div class="small-12 medium-12 large-12 columns calendar">';
 										echo '<p class="stocker-month">'.$eventstartmonth.'</p>';
 										echo '<p class="stocker-day">'.$eventstartday.'</p>';
 						echo '</div>';
-			echo '</div>';	
+			echo '</div>';
 		?>
  </div>
 	<div class="small-12 medium-10 large-10 columns nopadding">
@@ -179,7 +179,7 @@ $cost = event_meta_box_get_meta('event_meta_box_ticket_price_s_');
           <p><?php echo 'Location: '.$location; ?></p>
         <p><?php echo 'Cost: '.$cost; ?></p>
         <p>&nbsp;</p>
- 
+
 	</header><!-- .entry-header -->
 	</div>
 	<div class="small-12 medium-12 large-12 columns">
@@ -215,13 +215,13 @@ $cost = event_meta_box_get_meta('event_meta_box_ticket_price_s_');
 <div class="column row event-list-row">
     <hr>
   </div>
-					
-				<?php	
+
+				<?php
 					endwhile;
 					endif;
 					?>
-					
-					
+
+
 			</div>
 
 			<?php endwhile; ?>
@@ -237,7 +237,7 @@ $cost = event_meta_box_get_meta('event_meta_box_ticket_price_s_');
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
-</div>	
+</div>
 
 </div>
 <?php get_footer(); ?>
