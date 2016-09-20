@@ -67,7 +67,7 @@ p.stocker-day{margin-top:-0.9rem;text-align:center;color:#0c3b78;display:block;l
 .orbit-slide p{font-size:.75rem}.cta-icons{width:100%;background-color:#0055a5;border-width:5px 0;border-style:solid;border-color:#ffc600}
 .cta-icons .icon-label{font-weight:500;color:#fefefe;font-size:1.125rem;margin-top:1rem}
 .cta-icons .row{background-image:url(/wp-content/themes/lorainccc/images/logo_xl_lccc_blue.png);background-position:center center;background-repeat:no-repeat;background-attachment:scroll;background-size:cover;padding:15px 0}
-.cta-icons .row .columns{padding:1.75rem 0}.yellow-icon{width:100px;height:100px;border-radius:50%;background-color:#ffc600;transition:background-color .25s ease-out,color .25s ease-out;position:relative}
+.cta-icons .row .columns{padding:1.75rem 0}.yellow-icon{width:100px;height:100px;border-radius:50%;background-color:#ffc600;-webkit-transition:background-color .25s ease-out,color .25s ease-out;transition:background-color .25s ease-out,color .25s ease-out;position:relative}
 .yellow-icon img{position:absolute;top:0;bottom:0;left:0;right:0;margin:auto}.yellow-icon:hover{background-color:smart-scale(#ffc600,10%,25%)}
 .service-box{margin-top:3rem}.service-box-header h2{text-transform:uppercase;font-weight:700;color:#fefefe;font-size:.6875rem;background:#0c3b78;line-height:170%;padding:1rem 0;margin-bottom:0;margin-top:0}
 .service-box-header h2 span{display:block;font-size:1.5625rem;color:#ffc600;text-transform:capitalize}
@@ -117,7 +117,20 @@ hr{border:0;height:20px;width:90%;height:50px;padding:2rem 0;box-shadow:0 15px 1
 .callout .name,.callout .hours-label{font-weight:700}.callout .callout-contact-method{margin-top:1.35rem}
 .callout .map-link{margin-top:4.45rem}/*!
 Section 3: Body
-*//*!
+*/
+@media only screen and (max-width: 40em) { 
+.slider-container{padding: 0 0 3rem 0;}
+}
+@media only screen and (min-width: 40em) { 
+.slider-container{min-height: 428px; padding: 0 0 3rem 0;}
+}
+img.alignright { float: right; margin: 0 0 1em 1em; }
+img.alignleft { float: left; margin: 0 1em 1em 0; }
+img.aligncenter { display: block; margin-left: auto; margin-right: auto; }
+.alignright { float: right; }
+.alignleft { float: left; }
+.aligncenter { display: block; margin-left: auto; margin-right: auto; }
+/*!
 Section 4: Header
 */input[type=search],input[type=search]:focus{max-width:260px;width:100%;height:2rem;margin:.5rem 0 0 0;border-radius:20px;padding:.25rem .25rem .25rem 2.2rem;font-size:.75rem;font-weight:700;background-image:url(/wp-content/themes/lorainccc/images/icons/icon-search.png);background-repeat:no-repeat;background-position:.75rem .45rem}
 a.skip-link.screen-reader-text{position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden}
