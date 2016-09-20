@@ -116,7 +116,7 @@ $cost = event_meta_box_get_meta('event_meta_box_ticket_price_s_');
 <div class="taxonomies">
 	<?php echo get_the_term_list( $post->ID, 'event_categories','', ' , ' , ''); ?>
 </div>
-        <p><?php echo 'Date: '.$eventstartmonthfull.' '.$eventstartday.' , '.$eventstartyear; ?></p>
+        <p><?php echo 'Date: '.$eventstartmonthfull.' '.$eventstartday.', '.$eventstartyear; ?></p>
         <p><?php echo 'Time: '.$starttime; ?></p>
           <p><?php echo 'Location: '.$location; ?></p>
        	<?php if($cost != ''){ ?>

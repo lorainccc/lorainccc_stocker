@@ -174,7 +174,7 @@ $cost = event_meta_box_get_meta('event_meta_box_ticket_price_s_');
 		<header class="entry-header">
         <a href="<?php the_permalink();?>"><?php the_title( '<h1 class="entry-title">', '</h1>' ); ?></a>
         <?php the_category( ', ' ); ?>
-        <p><?php echo 'Date: '.$eventstartmonthfull.''.$eventstartday.', '.$eventstartyear; ?></p>
+        <p><?php echo 'Date: '.$eventstartmonthfull.' '.$eventstartday.', '.$eventstartyear; ?></p>
         <p><?php echo 'Time: '.$starttime; ?></p>
           <p><?php echo 'Location: '.$location; ?></p>
         <p><?php echo 'Cost: '.$cost; ?></p>
