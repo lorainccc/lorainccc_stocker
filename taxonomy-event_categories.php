@@ -40,27 +40,29 @@ get_header(); ?>
 <?php
 			// get the currently queried taxonomy term, for use later in the template file
 $term = get_queried_object();
-			$args = array(
+					$paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
+     $args = array(
     'post_type' => 'lccc_events',
     'event_categories' => $term->slug,
     'post_status' => 'publish',
     'order'=> 'ASC',
     'orderby'=> 'meta_value',
+				'paged' => $paged,		
     'meta_key' => 'event_start_date',
 );
 $query = new WP_Query( $args );
-  // output the term name in a heading tag
-    echo '<h2>' . $term->name . ' Events </h2>';
 
-				// output the term descriptopn in a paragraph tag
-     echo '<p>' . $term->description . '</p>';
+    // output the term name in a heading tag
+    	echo '<h2>' . $term->name . ' Events </h2>';
 
-			// output the link to the page that contains the Category Description
-			$siteurl= get_site_url();
-			echo '<a href="'.$siteurl.'/' . $term->slug .'">'. 'Learn More</a>';
+    // output the term descriptopn in a paragraph tag
+     	echo '<p>' . $term->description . '</p>';
 
-			if ($query->have_posts()):
+    // output the link to the page that contains the Category Description
+	$siteurl= get_site_url();
+	echo '<a href="'.$siteurl.'/' . $term->slug .'">'. 'Learn More</a>';
 
+if ($query->have_posts()):
         // Start the Loop
         while ( $query->have_posts() ) : $query->the_post();
 
@@ -173,12 +175,19 @@ $cost = event_meta_box_get_meta('event_meta_box_ticket_price_s_');
     <hr>
   </div>
 
-        <?php endwhile;
-
+        <?php endwhile; ?>
+<div id="pagination" class="clearfix">
+  <div style="float:left;"><?php previous_posts_link( 'Previous Events' ); ?></div>
+  <div style="float:right;"><?php next_posts_link( 'More Events', $wp_query->max_num_pages ); ?></div>
+</div>			
+			
+			<?php
+			// use reset postdata to restore orginal query
+			   wp_reset_postdata();
 endif; // end of check for query having posts
 
-// use reset postdata to restore orginal query
-wp_reset_postdata();
+
+
 
 			?>
 
