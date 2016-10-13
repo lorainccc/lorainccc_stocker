@@ -125,7 +125,7 @@ Section 3: Body
 .slider-container{padding: 0 0 3rem 0;}
 }
 @media only screen and (min-width: 40em) { 
-.slider-container{min-height: 428px; padding: 0 0 3rem 0;}
+.slider-container{min-height: 460px; padding: 0 0 3rem 0;}
 }
 img.alignright { float: right; margin: 0 0 1em 1em; }
 img.alignleft { float: left; margin: 0 1em 1em 0; }
