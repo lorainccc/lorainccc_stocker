@@ -122,7 +122,9 @@ get_header(); ?>
 		$key_1_value = get_post_meta( get_the_ID(), 'event_start_date', true );
 			?>
 <div id="post-<?php the_ID(); ?>" class="small-12 medium-12 large-12 columns nopadding">
-			<div class="small-12 medium-12 large-4 columns nopadding">
+	<?php 
+if ( has_post_thumbnail() ) { ?>
+			<div class="small-12 medium-12 large-4 columns" style=" padding-left: 0;padding-right: 0.4rem;padding-top: 0.7rem;">
 			<?php
 							the_post_thumbnail();
 			?>
@@ -146,6 +148,27 @@ get_header(); ?>
 				</div><!-- .entry-content -->
 			</div>
 			</div>
+	<?php }else{ ?>
+			<div class="small-12 medium-12 large-12 columns nopadding">
+                        <header class="entry-header">
+        <a href="<?php the_permalink();?>"><?php the_title( '<h1 class="entry-title">', '</h1>' ); ?></a>
+			<div class="taxonomies">
+				<?php echo get_the_term_list( $post->ID, 'event_categories','', ' , ' , ''); ?>
+			</div>
+			<p><?php echo 'Date: '.$eventstartmonthfull.' '.$eventstartday.', '.$eventstartyear; ?></p>
+        		<p><?php echo 'Time: '.$starttime; ?></p>
+          		<p><?php echo 'Location: '.$location; ?></p>
+        		<p><?php echo 'Cost: '.$cost; ?></p>
+        		<p>&nbsp;</p>
+			</header>
+			<div class="small-12 medium-12 large-12 columns nopadding">
+				<div class="entry-content">
+					<?php the_excerpt();?>
+					<a class="button" href="<?php the_permalink();?>">More Information</a>
+				</div><!-- .entry-content -->
+			</div>
+			</div>
+<?php }?>
 </div>
 
 			 <div class="column row event-list-row">
