@@ -132,7 +132,7 @@ if ( has_post_thumbnail() ) { ?>
 							the_post_thumbnail();
 			?>
  			</div>
-			<div class="small-12 medium-12 large-8 columns nopadding">
+			<div class="small-12 medium-12 large-8 columns">
                         <header class="entry-header">
         
 			<div class="taxonomies">
