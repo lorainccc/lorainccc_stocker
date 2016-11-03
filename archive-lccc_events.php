@@ -124,14 +124,17 @@ get_header(); ?>
 <div id="post-<?php the_ID(); ?>" class="small-12 medium-12 large-12 columns nopadding">
 	<?php 
 if ( has_post_thumbnail() ) { ?>
-			<div class="small-12 medium-12 large-4 columns" style=" padding-left: 0;padding-right: 0.4rem;padding-top: 0.7rem;">
+			<div class="small-12 medium-12 large-12 columns nopadding">
+					<a href="<?php the_permalink();?>"><?php the_title( '<h1 class="entry-title">', '</h1>' ); ?></a>
+			</div>
+			<div class="small-12 medium-12 large-4 columns" style=" padding-left: 0;padding-right: 0.6rem;margin-top: 0.8rem;">
 			<?php
 							the_post_thumbnail();
 			?>
  			</div>
 			<div class="small-12 medium-12 large-8 columns nopadding">
                         <header class="entry-header">
-        <a href="<?php the_permalink();?>"><?php the_title( '<h1 class="entry-title">', '</h1>' ); ?></a>
+        
 			<div class="taxonomies">
 				<?php echo get_the_term_list( $post->ID, 'event_categories','', ' , ' , ''); ?>
 			</div>
