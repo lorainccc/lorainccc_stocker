@@ -122,17 +122,12 @@ get_header(); ?>
 		$key_1_value = get_post_meta( get_the_ID(), 'event_start_date', true );
 			?>
 <div id="post-<?php the_ID(); ?>" class="small-12 medium-12 large-12 columns nopadding">
-			<div class="small-12 medium-12 large-2 columns nopadding">
+			<div class="small-12 medium-12 large-4 columns nopadding">
 			<?php
-				echo '<div class="small-12 medium-12 large-12 columns event-date">';
-         			echo '<div class="small-12 medium-12 large-12 columns calendar">';                
-				echo '<p class="stocker-month">'.$eventstartmonth.'</p>';
-				echo '<p class="stocker-day">'.$eventstartday.'</p>';
-				echo '</div>';
-				echo '</div>';	
+							the_post_thumbnail();
 			?>
  			</div>
-			<div class="small-12 medium-12 large-10 columns nopadding">
+			<div class="small-12 medium-12 large-8 columns nopadding">
                         <header class="entry-header">
         <a href="<?php the_permalink();?>"><?php the_title( '<h1 class="entry-title">', '</h1>' ); ?></a>
 			<div class="taxonomies">
