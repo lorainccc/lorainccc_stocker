@@ -39,7 +39,7 @@ h3{font-size:1.425rem;}
 h4{font-size:1.125rem;}
 h2{line-height:110%;margin-top:.25rem;font-size:1.625rem;font-family:'Raleway',sans-serif}
 h2.cta-h2{text-transform:uppercase;font-family:'Raleway',sans-serif}
-p{font-weight:500;font-size:.8125rem;font-family:'Open Sans',sans-serif}
+p{font-weight:500;font-size:.8625rem;font-family:'Open Sans',sans-serif}
 a{font-family:'Open Sans',sans-serif}/*! Base Typography *//*! Typography Helpers *//*!
 Section 1: Foundation
 */.columns.view-all-link a.button.expand{margin-top:21px}
@@ -102,7 +102,7 @@ hr{border:0;height:20px;width:90%;height:50px;padding:2rem 0;box-shadow:0 15px 1
 .fw-lead p{font-size:1rem}.lead p{font-size:1rem}.news-feed .featured-image img{width:100%;height:auto;margin-bottom:1rem}
 .gateway-links{padding-top:2rem;margin-bottom:2rem;box-shadow:0 -20px 20px -20px rgba(216,216,216,0.8);-moz-box-shadow:0 -20px 20px -20px rgba(216,216,216,0.8);-webkit-box-shadow:0 -20px 20px -20px rgba(216,216,216,0.8)}
 .gateway-links h2{font-size:1.5rem;margin-bottom:0}.gateway-links .menu>li>a{font-size:.75rem;color:#5593db;text-decoration:underline;padding:.5rem 0}
-.gateway-links img{margin-top:.5rem;margin-bottom:.5rem;width:100%;height:auto}.gateway-links a{font-size:.8125rem;text-decoration:underline;font-weight:800}
+.gateway-links img{margin-top:.5rem;margin-bottom:.5rem;width:100%;height:auto}.gateway-links a{font-size:.8625rem;text-decoration:underline;font-weight:800}
 .row .row.lccc-badge{padding-top:1.25rem;padding-bottom:1.25rem;font-size:.75rem;color:#fefefe;margin:1rem 0 0 0}
 .row .row.lccc-badge h3{font-weight:600;font-size:1.25rem;color:#fefefe;margin-bottom:.25rem}
 .row .row.lccc-badge .icon{margin-top:.5rem}.crumbs{padding-top:2rem;padding-bottom:2rem;font-size:.8125rem}

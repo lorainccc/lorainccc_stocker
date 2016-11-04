@@ -13,7 +13,7 @@ get_header(); ?>
 </div>
 <div class="medium-4 large-4 columns hide-for-small-only">
 <?php $menuslug = $post->post_name; 
-echo $menuslug;
+//echo $menuslug;
 ?>	
 <div class="small-12 medium-12 large-12 columns sidebar-widget">
 		<div class="small-12 medium-12 large-12 columns sidebar-menu-header">
