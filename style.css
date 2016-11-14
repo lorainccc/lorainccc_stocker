@@ -118,7 +118,7 @@ hr{border:0;height:20px;width:90%;height:50px;padding:2rem 0;box-shadow:0 15px 1
 .blue-panel a.button{background:#5593db}.blue-panel img{width:100%;height:auto;margin-bottom:1rem}
 .callout{margin-top:1rem;margin-bottom:2rem}.callout span{display:block}.callout h2{font-weight:600;font-size:1.25rem}
 .callout .name,.callout .hours-label{font-weight:700}.callout .callout-contact-method{margin-top:1.35rem}
-.callout .map-link{margin-top:4.45rem}/*!
+.callout .map-link{margin-top:4.45rem}div.content-area ul li {margin: 0 0 0 6px;font-size: .8625rem;}/*!
 Section 3: Body
 */
 @media only screen and (max-width: 40em) { 
