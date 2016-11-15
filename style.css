@@ -42,8 +42,11 @@ h2.cta-h2{text-transform:uppercase;font-family:'Raleway',sans-serif}
 p{font-weight:500;font-size:.8625rem;font-family:'Open Sans',sans-serif}
 a{font-family:'Open Sans',sans-serif}/*! Base Typography *//*! Typography Helpers *//*!
 Section 1: Foundation
-*/.columns.view-all-link a.button.expand{margin-top:21px}
+*/
+/*! Section 2: Content */
+.columns.view-all-link a.button.expand{margin-top: 21px;}
 .column.row.event-list-row hr{border:0;height:20px;width:90%;height:50px;padding:.5rem 0;box-shadow:0 15px 15px -15px #dcdcdc;margin:-50px auto 10px}
+div.row hr{margin: -80px auto 40px;height: 25px;padding: 10px 0;width: 100%;}
 .columns.event-container{margin-top:35px}.columns.content-container{margin-top:1.5rem}
 .columns.event-date{padding:0}h1.entry-title.indiv-event{font-size:2.625rem}header.entry-header p{margin-bottom:0}
 .columns.event-list-event-container{padding-top:1.5rem}a.buy-ticket-link{font-size:1.6rem}
@@ -118,7 +121,9 @@ hr{border:0;height:20px;width:90%;height:50px;padding:2rem 0;box-shadow:0 15px 1
 .blue-panel a.button{background:#5593db}.blue-panel img{width:100%;height:auto;margin-bottom:1rem}
 .callout{margin-top:1rem;margin-bottom:2rem}.callout span{display:block}.callout h2{font-weight:600;font-size:1.25rem}
 .callout .name,.callout .hours-label{font-weight:700}.callout .callout-contact-method{margin-top:1.35rem}
-.callout .map-link{margin-top:4.45rem}/*!
+.callout .map-link{margin-top:4.45rem}
+
+/*!
 Section 3: Body
 */
 @media only screen and (max-width: 40em) { 
