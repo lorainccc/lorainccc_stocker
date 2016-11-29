@@ -40,29 +40,26 @@ get_header(); ?>
 <?php
 			// get the currently queried taxonomy term, for use later in the template file
 $term = get_queried_object();
-					$paged = ( get_query_var('page') ) ? get_query_var('page') : 1;
-     $args = array(
+			$args = array(
     'post_type' => 'lccc_events',
     'event_categories' => $term->slug,
     'post_status' => 'publish',
     'order'=> 'ASC',
     'orderby'=> 'meta_value',
-				'paged' => $paged,		
     'meta_key' => 'event_start_date',
 );
 $query = new WP_Query( $args );
+  // output the term name in a heading tag
+    echo '<h2>' . $term->name . ' Events </h2>';
 
-    // output the term name in a heading tag
-    	echo '<h2>' . $term->name . ' Events </h2>';
+				// output the term descriptopn in a paragraph tag
+     echo '<p>' . $term->description . '</p>';
 
-    // output the term descriptopn in a paragraph tag
-     	echo '<p>' . $term->description . '</p>';
-
-    // output the link to the page that contains the Category Description
-	$siteurl= get_site_url();
-	echo '<a href="'.$siteurl.'/' . $term->slug .'">'. 'Learn More</a>';
-
-if ($query->have_posts()):
+			// output the link to the page that contains the Category Description
+			$siteurl= get_site_url();
+			echo '<a href="'.$siteurl.'/' . $term->slug .'">'. 'Learn More</a>';
+	
+		if ($query->have_posts()):
         // Start the Loop
         while ( $query->have_posts() ) : $query->the_post();
 
@@ -129,7 +126,7 @@ $cost = event_meta_box_get_meta('event_meta_box_ticket_price_s_');
 	<div class="small-12 medium-10 large-10 columns nopadding">
 	<div class="small-12 medium-12 large-12 columns nopadding">
 		<header class="entry-header">
-        <a href="<?php the_permalink();?>"><?php the_title( '<h1 class="entry-title">', '</h1>' ); ?></a>
+        <a href="<?php the_permalink();?>"><?php the_title( '<h2 class="entry-title">', '</h2>' ); ?></a>
        <div class="taxonomies">
 	<?php echo get_the_term_list( $post->ID, 'event_categories', '', ' , ' , ''); ?>
 </div>
@@ -175,19 +172,12 @@ $cost = event_meta_box_get_meta('event_meta_box_ticket_price_s_');
     <hr>
   </div>
 
-        <?php endwhile; ?>
-<div id="pagination" class="clearfix">
-  <div style="float:left;"><?php previous_posts_link( 'Previous Events' ); ?></div>
-  <div style="float:right;"><?php next_posts_link( 'More Events', $wp_query->max_num_pages ); ?></div>
-</div>			
-			
-			<?php
-			// use reset postdata to restore orginal query
-			   wp_reset_postdata();
+        <?php endwhile;
+
 endif; // end of check for query having posts
 
-
-
+// use reset postdata to restore orginal query
+wp_reset_postdata();
 
 			?>
 

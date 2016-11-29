@@ -18,7 +18,7 @@ get_header(); ?>
 	<h3><?php echo bloginfo('the-title'); ?></h3>
 		</div>
 	<?php	if ( has_nav_menu( 'left-nav' ) ) : ?>
-	<div id="secondary" class="medium-12 columns secondary nopadding">
+	<div id="secondary" class="secondary">
 		<?php if ( has_nav_menu( 'left-nav' ) ) : ?>
 			<nav id="site-navigation" class="main-navigation" role="navigation">
 				<?php
