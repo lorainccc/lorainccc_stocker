@@ -16,15 +16,15 @@ get_header(); ?>
 		<div class="small-12 medium-12 large-12 columns sidebar-menu-header">
 <h3><?php echo bloginfo('the-title'); ?></h3>
 		</div>
-	<?php	if ( has_nav_menu( 'left-nav' ) ) : ?>
+	<?php	if ( has_nav_menu( 'stocker-left-nav' ) ) : ?>
 	<div id="secondary" class="secondary">
-		<?php if ( has_nav_menu( 'left-nav' ) ) : ?>
+		<?php if ( has_nav_menu( 'stocker-left-nav' ) ) : ?>
 			<nav id="site-navigation" class="main-navigation" role="navigation">
 				<?php
 					// Primary navigation menu.
 					wp_nav_menu( array(
 						'menu_class'     => 'nav-menu',
-						'theme_location' => 'left-nav',
+						'theme_location' => 'stocker-left-nav',
 					) );
 				?> 
 			</nav><!-- .main-navigation -->

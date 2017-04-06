@@ -45,10 +45,15 @@ function lorainccc_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary' => esc_html__( 'Primary Menu', 'lccc-framework' ),
-		'stocker-primary' => esc_html__( 'Stocker Menu', 'lorainccc' ),
-		'footer-quicklinks-nav' => esc_html__( 'Footer Quicklinks', 'lorainccc' ),
 		'left-nav' => esc_html__( 'Left Nav', 'lorainccc' ),
+		'footer-quicklinks-nav' => esc_html__( 'Footer Quicklinks', 'lorainccc' ),
+		'footer-campus-location-nav' => esc_html__( 'Footer Campus Locations', 'lorainccc' ),
+		'mobile-primary' => esc_html__( 'Mobile Primary Menu', 'lorainccc_subsite' ),
+		'header-shortcuts' => esc_html__( 'Header Shortcuts Menu', 'lorainccc' ),
+  'mobile-header-shortcuts' => esc_html__( 'Mobile Header Shortcuts Menu', 'lorainccc' ),
+		'stocker-primary' => esc_html__( 'Stocker Menu', 'lorainccc' ),
 		'stocker-mobile-primary' => esc_html__( 'Mobile Primary Menu', 'lorainccc' ),
+		'stocker-left-nav' => esc_html__( 'Stocker Left Nav', 'lorainccc' ),
 		'about-menu' => esc_html__( 'About Menu', 'lorainccc' ),
 		'visual-art-menu' => esc_html__( 'Visual Art Menu', 'lorainccc' ),		
 	) );
