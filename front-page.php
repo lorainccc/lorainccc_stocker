@@ -73,10 +73,47 @@ get_header();
 												<?php } ?>								
 										</div>
 										<div class="small-12 medium-12 large-12 columns">
-											<?php if ( is_active_sidebar( 'lccc-announcements-sidebar' ) ) { ?>
-																	<?php dynamic_sidebar( 'lccc-announcements-sidebar' ); ?>
-												<?php } ?>				
-										</div>					
+									<?php
+										echo '<div class="small-12 medium-12 large-12 columns lccc_announcement-sub-site">';
+														echo '<div class="small-12 medium-4 large-3 columns lccc_announcement headerlogo">';
+											echo '<i class="lccc-font-lccc-reverse">'.'</i>';
+							echo '</div>';
+							echo '<div class="small-12 medium-8 large-9 columns ">';
+										echo '<h2 class="headertext">'.'Announcments'.'</h2>';
+							echo '</div>';
+			echo '</div>';
+													// Announcement Query
+													$domain = 'https://' . $_SERVER['SERVER_NAME'].'/';
+													$args = array(
+														'post_type' => 'lccc_announcement',
+													);
+													$stocker_annoucnement_query = new WP_Query( $args );
+
+													// The Loop
+													if ( $stocker_annoucnement_query->have_posts() ) {
+															while ( $stocker_annoucnement_query->have_posts() ) {
+															$stocker_annoucnement_query->the_post();
+															 echo '<div class="small-12 medium-12 large-12 columns sub-announcement-container">';
+																		echo '<div class="small-12 medium-12 large-12 columns">';?>
+																				<a class="announcement-title-link" href="<?php the_permalink(); ?>">
+																					<?php the_title(); ?>
+																				</a>
+																				<?php
+																					the_excerpt('<p>','</p>');
+																	echo '</div>';
+															echo '</div>';
+														}
+														/* Restore original Post Data */
+														wp_reset_postdata();
+													} else {
+														// no posts found
+													}
+													echo '<div class="small-12 medium-12 large-12 columns view-all-athletics-button">';
+							echo '<a href="'.$domain.'stocker/lccc_announcement" class="button">View All Announcements</a>';
+		     echo '</div>';
+										?>
+										
+									</div>					
 				</div>				
   </section>		
 			<?php if ( is_active_sidebar( 'sponsor-sidebar' ) ) { ?>

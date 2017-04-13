@@ -32,13 +32,15 @@ Color Section : LCCC Color Scheme
 Mixins Section: LCCC Mixins
 *//*!
 Text Section
-*/h1{font-size:2.1875rem;margin-top:.25rem;font-family:'Raleway',sans-serif}
+*/body{font-size: 1.025rem;}h1{font-size:2.1875rem;margin-top:.25rem;font-family:'Raleway',sans-serif}
 h1,h2{color:#0055a5;font-weight:700;font-family:'Raleway',sans-serif}
 h3,h4{font-weight:700;font-family:'Raleway',sans-serif}h3{font-size:1.425rem}
 h4{font-size:1.125rem}h2{line-height:110%;margin-top:.25rem;font-size:1.625rem;font-family:'Raleway',sans-serif}
 h2.cta-h2{text-transform:uppercase;font-family:'Raleway',sans-serif}
-p{font-weight:500;font-size:.8125rem;font-family:'Open Sans',sans-serif}
-a{font-family:'Open Sans',sans-serif}/*! Base Typography *//*! Typography Helpers *//*!
+p{font-weight:500;font-size: 1.025rem;font-family:'Open Sans',sans-serif}
+a{font-family:'Open Sans',sans-serif}
+h2.headertext {margin: 0;color: #fff;font-size: 1.9rem;line-height: 2.105263;margin-bottom: 0.5rem;margin-top: -1px;text-align: left;}a.announcement-title-link{line-height: 2.5rem;color: #0055a5;font-weight: bold;font-size: 1rem;}div.sub-announcement-container p{font-size: 0.9rem;}
+/*! Base Typography *//*! Typography Helpers *//*!
 Section 1: Foundation
 *//*! Section 2: Content */.columns.view-all-link a.button.expand{margin-top:21px}
 .column.row.event-list-row hr{border:0;height:20px;width:90%;height:50px;padding:.5rem 0;box-shadow:0 15px 15px -15px #dcdcdc;margin:-50px auto 10px}
@@ -117,6 +119,7 @@ hr{border:0;height:20px;width:90%;height:50px;padding:2rem 0;box-shadow:0 15px 1
 .callout{margin-top:1rem;margin-bottom:2rem}.callout span{display:block}.callout h2{font-weight:600;font-size:1.25rem}
 .callout .name,.callout .hours-label{font-weight:700}.callout .callout-contact-method{margin-top:1.35rem}
 .callout .map-link{margin-top:4.45rem}div.content-area ul li{margin:0 0 0 6px;font-size:.8625rem}
+
 /*!
 Section 3: Body
 */img.alignright{float:right;margin:0 0 1em 1em}img.alignleft{float:left;margin:0 1em 1em 0}
