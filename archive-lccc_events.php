@@ -89,10 +89,25 @@ get_header(); ?>
 		$paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
                  $eventargs=array(
                     'post_type' => 'lccc_events',
-		    'order'=> 'ASC',
-    		    'orderby'=> 'meta_value',
-		    'paged' => $paged,
-    		    'meta_key' => 'event_start_date',
+		                  'paged' => $paged,
+/*                    'order'=> 'ASC',
+                    'orderby'=> 'meta_value',
+    		              'meta_key' => 'event_start_date',*/
+                    'meta_query' => array(
+                      'relation' => 'AND',
+                      'event_start_day_clause' => array(
+                        'key' => 'event_start_date',
+                        'compare' => 'EXISTS',
+                      ),
+                      'event_start_time_clause' => array(
+                        'key' => 'event_start_time',
+                        'compare' => 'EXISTS',
+                      ),
+                     ),
+                     'orderby' => array(
+                       'event_start_day_clause' => 'ASC',
+                       'event_start_time_clause' => 'ASC',
+                     ),                    
                 );
 					$wp_query = new WP_Query($eventargs);
 					if ( $wp_query->have_posts() ) :
