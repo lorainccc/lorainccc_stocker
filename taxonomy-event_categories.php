@@ -45,10 +45,25 @@ $term = get_queried_object();
     'post_type' => 'lccc_events',
     'event_categories' => $term->slug,
     'post_status' => 'publish',
-    'order'=> 'ASC',
-    'orderby'=> 'meta_value',
-				'paged' => $paged,		
-    'meta_key' => 'event_start_date',
+//    'order'=> 'ASC',
+//    'orderby'=> 'meta_value',
+//				'paged' => $paged,		
+//    'meta_key' => 'event_start_date',
+    'meta_query' => array(
+    'relation' => 'AND',
+    'event_start_day_clause' => array(
+      'key' => 'event_start_date',
+      'compare' => 'EXISTS',
+    ),
+    'event_start_time_clause' => array(
+      'key' => 'event_start_time',
+      'compare' => 'EXISTS',
+    ),
+   ),
+   'orderby' => array(
+     'event_start_day_clause' => 'ASC',
+     'event_start_time_clause' => 'ASC',
+   ),
 );
 $query = new WP_Query( $args );
 
