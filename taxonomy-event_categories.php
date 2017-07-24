@@ -239,7 +239,7 @@ if ( has_post_thumbnail() ) { ?>
         <?php endwhile; ?>
 <div id="pagination" class="clearfix">
   <div style="float:left;"><?php previous_posts_link( 'Previous Events' ); ?></div>
-  <div style="float:right;"><?php next_posts_link( 'More Events', $wp_query->max_num_pages ); ?></div>
+  <div style="float:right;"><?php next_posts_link( 'More Events', $query->max_num_pages ); ?></div>
 </div>			
 			
 			<?php
