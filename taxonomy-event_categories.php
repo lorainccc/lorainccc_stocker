@@ -40,7 +40,7 @@ get_header(); ?>
 <?php
 			// get the currently queried taxonomy term, for use later in the template file
 $term = get_queried_object();
-					$paged = ( get_query_var('page') ) ? get_query_var('page') : 1;
+					$paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
      $args = array(
     'post_type' => 'lccc_events',
     'event_categories' => $term->slug,
