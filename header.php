@@ -25,7 +25,7 @@
     <div class="large-6 medium-6 columns">
       <ul id="header-menu" class="menu align-right">
         <li><a href="http://www.lorainccc.edu/" class="ql-icon ql-3" target="_blank">LCCC Home</a></li>
-        <li><a href="https://tickets.lorainccc.edu/public/" class="ql-icon ql-4">Buy Tickets</a></li>
+        <li><a href="http://sa1.seatadvisor.com/sabo/servlets/EventSearch?presenter=STOCKER" class="ql-icon ql-4">Buy Tickets</a></li>
       </ul>
       <!-- This should be similar to what is generated when using Wordpress searchform.php -->
       <form role="search" method="get" class="search-form" action="">
