@@ -45,6 +45,7 @@ $term = get_queried_object();
     'post_type' => 'lccc_events',
     'event_categories' => $term->slug,
     'post_status' => 'publish',
+      'paged' => $paged,
 //    'order'=> 'ASC',
 //    'orderby'=> 'meta_value',
 //				'paged' => $paged,		
