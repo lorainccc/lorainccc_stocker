@@ -317,5 +317,4 @@ $role = get_role('editor');
 $role->remove_cap('publish_posts');
 $role->remove_cap('publish_pages');
 
-
 ?>

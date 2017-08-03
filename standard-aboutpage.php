@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Aout Page Template
+ * Template Name: About Page Template
  *
  * @package WordPress
  * @subpackage lorainccc

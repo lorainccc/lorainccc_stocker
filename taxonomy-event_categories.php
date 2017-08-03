@@ -39,13 +39,17 @@ get_header(); ?>
 
 <?php
 			// get the currently queried taxonomy term, for use later in the template file
+
 $term = get_queried_object();
+      
 					$paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
+
      $args = array(
     'post_type' => 'lccc_events',
     'event_categories' => $term->slug,
     'post_status' => 'publish',
-      'paged' => $paged,
+    'nopaging' => true,
+    //'paged' => $paged,
 //    'order'=> 'ASC',
 //    'orderby'=> 'meta_value',
 //				'paged' => $paged,		
@@ -66,6 +70,7 @@ $term = get_queried_object();
      'event_start_time_clause' => 'ASC',
    ),
 );
+
 $query = new WP_Query( $args );
 
     // output the term name in a heading tag
@@ -241,7 +246,7 @@ if ( has_post_thumbnail() ) { ?>
   <div style="float:left;"><?php previous_posts_link( 'Previous Events' ); ?></div>
   <div style="float:right;"><?php next_posts_link( 'More Events', $query->max_num_pages ); ?></div>
 </div>			
-			
+
 			<?php
 			// use reset postdata to restore orginal query
 			   wp_reset_postdata();
