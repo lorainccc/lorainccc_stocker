@@ -1,7 +1,7 @@
 /*!
  Theme Name: lorainccc_stocker
  Theme URI:    http://www.lorainccc.edu 
- Description:  Lorain County Community College Theme 
+ Description:  Lorain County Community College Child Theme 
  Author: LCCC Web Development Team 
  Author URI: http://www.lorainccc.edu 
  Template: lccc-framework 
@@ -32,15 +32,14 @@ Color Section : LCCC Color Scheme
 Mixins Section: LCCC Mixins
 *//*!
 Text Section
-*/body{font-size: 1.025rem;}h1{font-size:2.1875rem;margin-top:.25rem;font-family:'Raleway',sans-serif}
+*/h1{font-size:2.1875rem;margin-top:.25rem;font-family:'Raleway',sans-serif}
 h1,h2{color:#0055a5;font-weight:700;font-family:'Raleway',sans-serif}
 h3,h4{font-weight:700;font-family:'Raleway',sans-serif}h3{font-size:1.425rem}
 h4{font-size:1.125rem}h2{line-height:110%;margin-top:.25rem;font-size:1.625rem;font-family:'Raleway',sans-serif}
 h2.cta-h2{text-transform:uppercase;font-family:'Raleway',sans-serif}
-p{font-weight:500;font-size: 1.025rem;font-family:'Open Sans',sans-serif}
-a{font-family:'Open Sans',sans-serif}
-h2.headertext {margin: 0;color: #fff;font-size: 1.9rem;line-height: 2.105263;margin-bottom: 0.5rem;margin-top: -1px;text-align: left;}a.announcement-title-link{line-height: 2.5rem;color: #0055a5;font-weight: bold;font-size: 1rem;}div.sub-announcement-container p{font-size: 0.9rem;}
-/*! Base Typography *//*! Typography Helpers *//*!
+p{font-weight:500;font-size:.8125rem;font-family:'Open Sans',sans-serif}
+a{font-family:'Open Sans',sans-serif}@media screen and (max-width:39.9375em){h1{font-size:1.35rem;line-height:105%}
+}/*! Base Typography *//*! Typography Helpers *//*!
 Section 1: Foundation
 *//*! Section 2: Content */.columns.view-all-link a.button.expand{margin-top:21px}
 .column.row.event-list-row hr{border:0;height:20px;width:90%;height:50px;padding:.5rem 0;box-shadow:0 15px 15px -15px #dcdcdc;margin:-50px auto 10px}
@@ -65,14 +64,18 @@ p.stocker-day{margin-top:-0.9rem;text-align:center;color:#0c3b78;display:block;l
 #home-news h2.headertext{margin:0}.home-hero{width:100%;background-image:url(/wp-content/themes/lorainccc/images/lccc_diningbookstore.jpg);background-position:center center;background-repeat:no-repeat;background-attachment:scroll;background-size:cover;height:450px}
 .hero-image{width:100%;background-position:center center;background-repeat:no-repeat;background-attachment:scroll;background-size:cover}
 .gateway{background-image:url(/wp-content/themes/lorainccc/images/lccc_diningbookstore.jpg)}
-.white-panel{padding:2rem 2rem 4rem 2rem;background:rgba(255,255,255,0.9)}.orbit-bullets button{height:.5rem;width:.5rem}
-.orbit-bullets button.is-active{background:#0c3b78}.orbit-slide h2{font-size:2.1875rem;color:#0c3b78;line-height:100%}
-.orbit-slide p{font-size:.75rem}.cta-icons{width:100%;background-color:#0055a5;border-width:5px 0;border-style:solid;border-color:#ffc600}
+@media screen and (max-width:39.9375em){.white-panel{margin-top:3rem}}.white-panel{padding:2rem 2rem 4rem 2rem;background:rgba(255,255,255,0.9)}
+.orbit-bullets button{height:.5rem;width:.5rem}.orbit-bullets button.is-active{background:#0c3b78}
+.orbit-slide h2{font-size:2.1875rem;color:#0c3b78;line-height:100%}.orbit-slide p{font-size:.75rem}
+.cta-icons{width:100%;background-color:#0055a5;border-width:5px 0;border-style:solid;border-color:#ffc600}
 .cta-icons .icon-label{font-weight:500;color:#fefefe;font-size:1.125rem;margin-top:1rem}
 .cta-icons .row{background-image:url(/wp-content/themes/lorainccc/images/logo_xl_lccc_blue.png);background-position:center center;background-repeat:no-repeat;background-attachment:scroll;background-size:cover;padding:15px 0}
-.cta-icons .row .columns{padding:1.75rem 0}.yellow-icon{width:100px;height:100px;border-radius:50%;background-color:#ffc600;transition:background-color .25s ease-out,color .25s ease-out;position:relative}
+.cta-icons .row .columns{padding:1.75rem 0}@media screen and (max-width:39.9375em){.cta-icons{margin-bottom:2rem}
+}.yellow-icon{width:100px;height:100px;border-radius:50%;background-color:#ffc600;transition:background-color .25s ease-out,color .25s ease-out;position:relative}
 .yellow-icon img{position:absolute;top:0;bottom:0;left:0;right:0;margin:auto}.yellow-icon:hover{background-color:smart-scale(#ffc600,10%,25%)}
-.service-box{margin-top:3rem}.service-box-header h2{text-transform:uppercase;font-weight:700;color:#fefefe;font-size:.6875rem;background:#0c3b78;line-height:170%;padding:1rem 0;margin-bottom:0;margin-top:0}
+.service-box{margin-top:3rem}@media screen and (min-width:40em){.service-box-copy{padding-left:0}
+.service-box-image{padding-right:0}.service-box .button{position:absolute;bottom:1rem;left:63.5px}
+.service-box-container{height:100%}}.service-box-header h2{text-transform:uppercase;font-weight:700;color:#fefefe;font-size:.6875rem;background:#0c3b78;line-height:170%;padding:1rem 0;margin-bottom:0;margin-top:0}
 .service-box-header h2 span{display:block;font-size:1.5625rem;color:#ffc600;text-transform:capitalize}
 .service-box-container{box-shadow:inset 0 0 10px #dcdcdc}.service-box-copy{position:relative;padding:0}
 .service-box-body{font-size:.75rem;padding:2rem 1rem}.yellow-bottom-border{width:97%;height:5px;background:#ffc600;float:left;margin-left:.9375rem}
@@ -106,7 +109,8 @@ hr{border:0;height:20px;width:90%;height:50px;padding:2rem 0;box-shadow:0 15px 1
 .row .row.lccc-badge{padding-top:1.25rem;padding-bottom:1.25rem;font-size:.75rem;color:#fefefe;margin:1rem 0 0 0}
 .row .row.lccc-badge h3{font-weight:600;font-size:1.25rem;color:#fefefe;margin-bottom:.25rem}
 .row .row.lccc-badge .icon{margin-top:.5rem}.crumbs{padding-top:2rem;padding-bottom:2rem;font-size:.8125rem}
-.callout-link{color:#0055a5;text-transform:uppercase;font-size:1.25rem;font-weight:800;margin-bottom:2rem;margin-top:2rem;line-height:100%}
+@media screen and (min-width:40em){aside.columns{padding-right:0;padding-left:0}.gateway-main,.home-left{padding-right:5rem}
+.main-right{padding-left:5rem}}.callout-link{color:#0055a5;text-transform:uppercase;font-size:1.25rem;font-weight:800;margin-bottom:2rem;margin-top:2rem;line-height:100%}
 .callout-link img{display:inline-block;margin-right:.5rem}.callout-link a,.callout-link span{color:#5593db}
 .video-container{margin-bottom:2rem;position:relative;padding-bottom:56.25%;padding-top:30px;height:0;overflow:hidden}
 .video-container iframe,.video-container object,.video-container embed{position:absolute;top:0;left:0;width:100%;height:100%}
@@ -119,24 +123,27 @@ hr{border:0;height:20px;width:90%;height:50px;padding:2rem 0;box-shadow:0 15px 1
 .callout{margin-top:1rem;margin-bottom:2rem}.callout span{display:block}.callout h2{font-weight:600;font-size:1.25rem}
 .callout .name,.callout .hours-label{font-weight:700}.callout .callout-contact-method{margin-top:1.35rem}
 .callout .map-link{margin-top:4.45rem}div.content-area ul li{margin:0 0 0 6px;font-size:.8625rem}
-
 /*!
 Section 3: Body
-*/img.alignright{float:right;margin:0 0 1em 1em}img.alignleft{float:left;margin:0 1em 1em 0}
+*/@media only screen and (max-width:40em){.slider-container{padding:0 0 3rem 0}
+}@media only screen and (min-width:40em){.slider-container{min-height:460px;padding:0 0 3rem 0}
+}img.alignright{float:right;margin:0 0 1em 1em}img.alignleft{float:left;margin:0 1em 1em 0}
 img.aligncenter{display:block;margin-left:auto;margin-right:auto}.alignright{float:right}
 .alignleft{float:left}.aligncenter{display:block;margin-left:auto;margin-right:auto}
 /*!
 Section 4: Header
-*/input[type=search],input[type=search]:focus{max-width:260px;width:100%;height:2rem;margin:.5rem 0 0 0;border-radius:20px;padding:.25rem .25rem .25rem 2.2rem;font-size:.75rem;font-weight:700;background-image:url(/wp-content/themes/lorainccc/images/icons/icon-search.png);background-repeat:no-repeat;background-position:.75rem .45rem}
+*/input[name=search],input[name=search]:focus{max-width:260px;width:100%;height:2rem;margin:.5rem 0 0 0;border-radius:20px;padding:.25rem .25rem .25rem 2.2rem;font-size:.75rem;font-weight:700;background-image:url(/wp-content/themes/lorainccc/images/icons/icon-search.png);background-repeat:no-repeat;background-position:.75rem .45rem}
 a.skip-link.screen-reader-text{position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden}
 a.skip-link.screen-reader-text:focus{position:static;width:auto;height:auto}.ql-icon{background-position:left center;background-repeat:no-repeat;background-size:.78125rem .78125rem}
 .ql-1{background-image:url(/wp-content/themes/lorainccc/images/icons/icon-az_blue.svg)}
 .ql-2{background-image:url(/wp-content/themes/lorainccc/images/icons/icon-faculty_blue.svg)}
 .ql-3{background-image:url(/wp-content/themes/lorainccc/images/icons/icon-faculty_blue.svg)}
 .ql-4{background-image:url(/wp-content/themes/lorainccc/images/icons/icon-campuslife_blue.svg)}
+td.gsc-clear-button{display:none}table.gsc-search-box tbody{background:transparent;border:0}
 /*!
 Section 5: Navigation
-*/header nav a,header nav a:hover{color:#fefefe;font-size:.875rem;font-weight:600}
+*/@media screen and (min-width:40em){header{padding-top:1.5rem}
+}@media screen and (min-width:1074px){nav.menu-centered{height:36px}}header nav a,header nav a:hover{color:#fefefe;font-size:.875rem;font-weight:600}
 header ul#header-menu li a{font-size:.78125rem;color:#0055a5;font-weight:700}header .menu:not(#header-menu):not(.vertical) li:hover,header .dropdown.menu .submenu{background:#0c3b78;border:0}
 header li.is-submenu-item{padding:.5rem 0;border-top:1px solid #0055a5}header .submenu{margin-top:-1px}
 header .submenu li{text-align:left}header .dropdown.menu .submenu li:hover{background:#fefefe !important;border-top:1px solid #0055a5 !important}
@@ -181,29 +188,15 @@ footer h2{font-size:.75rem;color:#ffc600;text-transform:uppercase;font-weight:70
 footer .menu>li>a{padding:0 .25rem 0 0}footer a,footer p{color:#fefefe;font-size:.75rem}
 footer .footer-logo{margin-bottom:2.5rem}footer ul{list-style:none;margin-left:0}
 footer ul li{margin-bottom:.75rem}footer .underline>li>a{text-decoration:underline}
-.footer-sm-links{margin-bottom:2rem}.mobile-app-link img{margin-right:.75rem}/*! Ryan's Updated Menu Styling */.breadcrumb-container{padding:2rem .9375rem !important;}
-.sidebar-widget{padding-top:0 !important;margin:1rem 0 3rem 0 !important}header.entry-header{padding-top:0 !important}
-.main-navigation ul:not(.sub-menu)>li{border:1px solid #dcdcdc !important;box-shadow:inset 0 0 10px #dcdcdc !important;padding:.75rem 2rem .75rem 1rem !important}
+.footer-sm-links{margin-bottom:2rem}.mobile-app-link img{margin-right:.75rem}@media screen and (min-width:40em){.mobile-app-link img,.mobile-app-link h2{float:left}
+}@media screen and (max-width:39.9375em){.footer-sm-links{width:210px;margin:0 auto 1rem auto}
+.footer-sm-links li a{padding:0}.footer-sm-links li a img{margin:0 .25rem}footer .row .columns{border-bottom:1px solid #5593db;padding:2rem 0 1rem 0}
+footer{padding-bottom:0}}@media all and (-ms-high-contrast:none),(-ms-high-contrast:active){div.row hr{margin:-80px auto 40px;height:10px;padding:1rem 0;width:100%}
+}/*! Ryan's Updated Menu Styling */@media screen and (min-width:40em){aside.columns{padding-right:.9375rem !important;padding-left:.9375rem !important}
+}.breadcrumb-container{padding:2rem .9375rem !important}.sidebar-widget{padding-top:0 !important;margin:1rem 0 3rem 0 !important}
+header.entry-header{padding-top:0 !important}.main-navigation ul:not(.sub-menu)>li{border:1px solid #dcdcdc !important;box-shadow:inset 0 0 10px #dcdcdc !important;padding:.75rem 2rem .75rem 1rem !important}
 .main-navigation ul:not(.sub-menu)>li>a{font-size:1rem !important;color:#0055a5 !important;font-weight:700 !important}
 .dropdown-toggle{top:10px !important;right:4px}.main-navigation ul ul{margin-left:0 !important;padding-left:1rem}
 .main-navigation ul ul li{border-top:1px solid #dcdcdc !important;padding-top:.5rem;padding-bottom:.5rem}
 .main-navigation ul ul li a{color:#0055a5 !important}ul{margin-top:0 !important}.is-dropdown-submenu{min-width:180px}
-.nopadding{padding:0}@media screen and (min-width:40em){.service-box-copy{padding-left:0}
-.service-box-image{padding-right:0}.service-box .button{position:absolute;bottom:1rem;left:63.5px}
-.service-box-container{height:100%}aside.columns{padding-right:0;padding-left:0}.gateway-main,.home-left{padding-right:5rem}
-.main-right{padding-left:5rem}header{padding-top:1.5rem}.mobile-app-link img,.mobile-app-link h2{float:left}
-aside.columns{padding-right:.9375rem !important;padding-left:.9375rem !important}
-}@media only screen and (min-width:40em){.slider-container{min-height:460px;padding:0 0 3rem 0}
-}@media screen and (min-width:1074px){nav.menu-centered{height:36px}}@media only screen and (max-width:40em){.slider-container{padding:0 0 3rem 0}
-}@media screen and (max-width:39.9375em){h1{font-size:1.35rem;line-height:105%}.white-panel{margin-top:3rem}
-.cta-icons{margin-bottom:2rem}.footer-sm-links{width:210px;margin:0 auto 1rem auto}
-.footer-sm-links li a{padding:0}.footer-sm-links li a img{margin:0 .25rem}footer .row .columns{border-bottom:1px solid #5593db;padding:2rem 0 1rem 0}
-footer{padding-bottom:0}}
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-     /* IE10+ CSS styles go here */
-div.row hr {
-    margin: -80px auto 40px;
-    height: 10px;
-    padding: 1rem 0;
-    width: 100%;
-}
+.nopadding{padding:0}

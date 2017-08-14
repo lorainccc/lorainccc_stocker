@@ -28,11 +28,25 @@
         <li><a href="http://sa1.seatadvisor.com/sabo/servlets/EventSearch?presenter=STOCKER" class="ql-icon ql-4">Buy Tickets</a></li>
       </ul>
       <!-- This should be similar to what is generated when using Wordpress searchform.php -->
-      <form role="search" method="get" class="search-form" action="">
-        <label>
-          <input type="search" placeholder="Search" name="s" class="float-right"/>
-        </label>
-      </form>
+					   <div class="large-9 medium-6 columns searchbox hide-for-print">
+          <?php if ( is_active_sidebar( 'lccc-search-sidebar' ) ) { ?>
+																<?php dynamic_sidebar( 'lccc-search-sidebar' ); ?>
+								<?php }else{
+															if ( class_exists( 'CustomGoogleSearch' ) ) {
+																// check for plugin using plugin name
+																// Plugin is activated
+																		if ( is_active_sidebar( 'lccc-four-o-four-sidebar' ) ) {
+
+																		}else{
+																			$instance = array(
+																			'display_results' => '3',
+																		);                                               the_widget('CGS_Widget', $instance);
+																			}
+															}else{
+																echo 'no widgets found';
+															}
+								}		?>
+					</div>
     </div>
   </div>
 <div class="medium-blue-bg show-for-medium">
