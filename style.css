@@ -1,15 +1,4 @@
 /*!
- Theme Name: lorainccc_stocker
- Theme URI:    http://www.lorainccc.edu 
- Description:  Lorain County Community College Child Theme 
- Author: LCCC Web Development Team 
- Author URI: http://www.lorainccc.edu 
- Template: lccc-framework 
- Version:1.0.0 
- License: GNU General Public License v2 or later 
- License URI: http://www.gnu.org/licenses/gpl-2.0.html 
- Text Domain:  lorainccc_stocker */ 
- /*!
 Table of Contents
 Color Section : LCCC Color Scheme
 Mixin Section : LCCC Mixins
@@ -123,6 +112,12 @@ hr{border:0;height:20px;width:90%;height:50px;padding:2rem 0;box-shadow:0 15px 1
 .callout{margin-top:1rem;margin-bottom:2rem}.callout span{display:block}.callout h2{font-weight:600;font-size:1.25rem}
 .callout .name,.callout .hours-label{font-weight:700}.callout .callout-contact-method{margin-top:1.35rem}
 .callout .map-link{margin-top:4.45rem}div.content-area ul li{margin:0 0 0 6px;font-size:.8625rem}
+figure{margin:0;padding:0}.gallery{margin:0 auto 18px;display:inline-block;width:100%}
+.gallery .gallery-item{float:left;margin-top:0;text-align:center;width:33%}.gallery-columns-2 .gallery-item{width:50%}
+.gallery-columns-3 .gallery-item{width:33%}.gallery-columns-4 .gallery-item{width:25%}
+.gallery img{padding:8px}.gallery img:hover{background:white}.gallery-columns-2 .attachment-medium{max-width:92%;height:auto}
+.gallery-columns-3 .attachment-thumbnail{max-width:90%;height:auto}.gallery-columns-4 .attachment-thumbnail{max-width:84%;height:auto}
+.gallery .gallery-caption{display:none}.gallery dl,.gallery dt{margin:0}.gallery br+br{display:none}
 /*!
 Section 3: Body
 */@media only screen and (max-width:40em){.slider-container{padding:0 0 3rem 0}

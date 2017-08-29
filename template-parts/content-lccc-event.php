@@ -46,7 +46,7 @@ $whattodisplay = 'lccc-events';
 
 
 										$starttimevar=strtotime($starteventtime);
-										$starttime=	date("h:i a",$starttimevar);
+										$starttime=	date("g:i a",$starttimevar);
 										$starteventtimehours = date("G",$starttimevar);
 										$starteventtimeminutes = date("i",$starttimevar);
 
