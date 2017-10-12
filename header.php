@@ -21,10 +21,10 @@
 
 	<header id="masthead" class="site-header" role="banner">
 		  <div class="row show-for-medium">
-    <div class="large-6 medium-6 columns"><a href="<?php echo esc_url( home_url( '' ) ); ?>"><img src="http://sites.lorainccc.edu/stocker/wp-content/uploads/sites/4/2016/07/Stocker-Arts-Ctr-header-logo.png" height="80" width="340" alt="Lorain County Community College Logo" /></a>  </div>
+    <div class="large-6 medium-6 columns"><a href="<?php echo esc_url( home_url( '' ) ); ?>"><img src="https://www.lorainccc.edu/stocker/wp-content/uploads/sites/4/2016/07/Stocker-Arts-Ctr-header-logo.png" height="80" width="340" alt="Lorain County Community College Logo" /></a>  </div>
     <div class="large-6 medium-6 columns">
       <ul id="header-menu" class="menu align-right">
-        <li><a href="http://www.lorainccc.edu/" class="ql-icon ql-3" target="_blank">LCCC Home</a></li>
+        <li><a href="https://www.lorainccc.edu/" class="ql-icon ql-3" target="_blank">LCCC Home</a></li>
         <li><a href="http://sa1.seatadvisor.com/sabo/servlets/EventSearch?presenter=STOCKER" class="ql-icon ql-4">Buy Tickets</a></li>
       </ul>
       <!-- This should be similar to what is generated when using Wordpress searchform.php -->
@@ -70,7 +70,7 @@
     </div>
   </div>
   <div class="row show-for-small-only mobile-nav-bar">
-    <div class="small-8 columns"> <a href="/stocker"><img style="margin-top: -1.3rem;" src="http://sites.lorainccc.edu/stocker/wp-content/uploads/sites/4/2016/07/Stocker-Arts-Ctr-logo.svg" alt="LCCC Stocker Logo"/></a> </div>
+    <div class="small-8 columns"> <a href="/stocker"><img style="margin-top: -1.3rem;" src="https://www.lorainccc.edu/stocker/wp-content/uploads/sites/4/2016/07/Stocker-Arts-Ctr-logo.svg" alt="LCCC Stocker Logo"/></a> </div>
     <div class="small-2 columns clearfix"> <span data-responsive-toggle="mobile-search" data-hide-for="medium"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/icons/magnifying-glass.svg" height="25" width="25" alt="" class="float-right" data-toggle/></span> </div>
     <div class="small-2 columns"> <span data-responsive-toggle="responsive-menu" data-hide-for="medium">
       <button class="menu-icon" type="button" data-toggle></button>
