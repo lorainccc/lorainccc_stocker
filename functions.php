@@ -160,7 +160,7 @@ function lorainccc_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
-  	register_sidebar( array(
+ 	register_sidebar( array(
 		'name'          => esc_html__( 'LCCC Search Sidebar', 'lorainccc' ),
 		'id'            => 'lccc-search-sidebar',
 		'description'   => esc_html__( 'Add widgets here.', 'lorainccc' ),

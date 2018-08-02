@@ -140,7 +140,7 @@ get_header(); ?>
 	<?php 
 if ( has_post_thumbnail() ) { ?>
 			<div class="small-12 medium-12 large-12 columns nopadding">
-					<a href="<?php the_permalink();?>"><?php the_title( '<h1 class="entry-title" style="padding-left: 0.3rem;">', '</h1>' ); ?></a>
+					<a href="<?php the_permalink();?>"><?php the_title( '<h2 style="padding-left: 0.3rem;">', '</h2>' ); ?></a>
 			</div>
 			<div class="small-12 medium-12 large-4 columns" style=" padding-left: 0;padding-right: 0.6rem;margin-top: 0.8rem;">
 			<?php
