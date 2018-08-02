@@ -188,9 +188,9 @@ function lorainccc_foundation_scripts() {
 
 		wp_enqueue_script( 'foundation-init-js', get_template_directory_uri() . '/foundation.js', array( 'jquery' ), '1', true );
 
-	wp_enqueue_script( 'lorainccc-function-script', get_stylesheet_directory_uri() . '/js/functions.js', array( 'jquery' ), '20150330', true );
+		wp_enqueue_script( 'lorainccc-function-script', get_stylesheet_directory_uri() . '/js/functions.js', array( 'jquery' ), '20150330', true );
 	
-wp_localize_script( 'lorainccc-function-script', 'screenReaderText', array(
+		wp_localize_script( 'lorainccc-function-script', 'screenReaderText', array(
 		'expand'   => '<span class="screen-reader-text">' . __( 'expand child menu', 'twentyfifteen' ) . '</span>',
 		'collapse' => '<span class="screen-reader-text">' . __( 'collapse child menu', 'twentyfifteen' ) . '</span>',
 	) );

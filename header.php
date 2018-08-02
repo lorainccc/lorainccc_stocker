@@ -61,23 +61,9 @@
       </ul>
       <!-- This should be similar to what is generated when using Wordpress searchform.php -->
 					   <div class="large-9 medium-6 columns searchbox hide-for-print">
-          <?php if ( is_active_sidebar( 'lccc-search-sidebar' ) ) { ?>
-																<?php dynamic_sidebar( 'lccc-search-sidebar' ); ?>
-								<?php }else{
-															if ( class_exists( 'CustomGoogleSearch' ) ) {
-																// check for plugin using plugin name
-																// Plugin is activated
-																		if ( is_active_sidebar( 'lccc-four-o-four-sidebar' ) ) {
-
-																		}else{
-																			$instance = array(
-																			'display_results' => '3',
-																		);                                               the_widget('CGS_Widget', $instance);
-																			}
-															}else{
-																echo 'no widgets found';
-															}
-								}		?>
+        <?php 
+										the_widget('WP_Widget_Search');
+								?>
 					</div>
     </div>
   </div>
