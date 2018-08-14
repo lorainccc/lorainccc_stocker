@@ -7,21 +7,22 @@
  * @since Lorainccc 1.0
  */
 get_header(); ?>
-<div class="row page-content">
-<div class="small-12 medium-12 large-12 columns breadcrumb-container">
+<div class="grid-container">
+<div class="grid-x grid-margin-x page-content">
+<div class="small-12 medium-12 large-12 cell breadcrumb-container">
    <?php get_template_part( 'template-parts/content', 'breadcrumb' ); ?>
 </div>
-<div class="medium-4 large-4 columns hide-for-small-only">
-<?php $menuslug = $post->post_name; 
+<div class="medium-4 large-4 cell hide-for-small-only">
+<?php $menuslug = $post->post_name;
 echo $menuslug;
-?>	
-<div class="small-12 medium-12 large-12 columns sidebar-widget">
-		<div class="small-12 medium-12 large-12 columns sidebar-menu-header">
+?>
+<div class="small-12 medium-12 large-12 cell sidebar-widget">
+		<div class="small-12 medium-12 large-12 cell sidebar-menu-header">
 <h3><?php echo bloginfo('the-title'); ?></h3>
 		</div>
 	</div>
 	</div>
-	<div class="small-12 medium-8 large-8 columns page-container">		
+	<div class="small-12 medium-8 large-8 cell page-container">
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 		<?php while ( have_posts() ) : the_post(); ?>
@@ -32,7 +33,8 @@ echo $menuslug;
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
-</div>	
-	
+</div>
+
+</div>
 </div>
 <?php get_footer(); ?>

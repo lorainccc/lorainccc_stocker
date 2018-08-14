@@ -10,31 +10,32 @@
  *
  * @package LCCC Framework
  */
-get_header(); 
+get_header();
 ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
   <?php if ( is_active_sidebar( 'stocker-slider-sidebar' ) ) { ?>
-			<div class="small-12 medium-12 large-12 columns slider-container nopadding">
+			<div class="small-12 medium-12 large-12 cell slider-container nopadding">
 						<?php dynamic_sidebar( 'stocker-slider-sidebar' ); ?>
 			</div>
 			<?php }else{ ?>
 			<div class="home-hero">
-    <div class="row">
+    <div class="grid-x grid-margin-x">
 				&nbsp;
 			</div>
   </div>
   <?php } ?>
-			<section class="row events-row">
+	<div class="grid-container">
+			<section class="grid-x grid-margin-x events-row">
 <?php if ( is_active_sidebar( 'lccc-events-sidebar' ) ) { ?>
 						<?php dynamic_sidebar( 'lccc-events-sidebar' ); ?>
 				<?php } ?>
 			</section>
-  <div class="column row">
+  <div class="cell grid-x grid-margin-x">
     <hr />
   </div>
-			<section class="row">
-   	<div class="small-12 medium-7 large-8 columns stocker-highlights">
+			<section class="grid-x grid-margin-x">
+   	<div class="small-12 medium-7 large-8 cell stocker-highlights">
 					<?php
 					$stockerhlargs=array(
 					'post_type' => 'page',
@@ -44,42 +45,66 @@ get_header();
 					$newstockerhighlights = new WP_Query($stockerhlargs);
 					if ( $newstockerhighlights->have_posts() ) :
 							while ( $newstockerhighlights->have_posts() ) : $newstockerhighlights->the_post();
-						?>		
-				<div class="small-12 medium-12 large-12 columns stocker-highlight-container">
-				   <div class="small-12 medium-6 large-6 columns highlight-image">
+						?>
+
+				<div class="small-12 medium-12 large-12 cell stocker-highlight-container">
+
+				   <div class="small-12 medium-6 large-6 cell highlight-image">
 					<a href="<?php echo esc_url( get_permalink() ); ?>"><?php the_post_thumbnail(); ?></a>
 				   </div>
-				<div class="small-12 medium-6 large-6 columns highlight-text">
-													<div class="small-12 medium-12 large-12 columns highlight-header">
+
+
+				<div class="small-12 medium-6 large-6 cell highlight-text">
+
+													<div class="small-12 medium-12 large-12 cell highlight-header">
 																<?php the_title('<h3>','</h3>');?>
 													</div>
-													<div class="small-12 medium-12 large-12 columns highlight-content">
+
+<div class="grid-container">
+													<div class="small-12 medium-12 large-12 cell highlight-content">
 															<?php the_excerpt('<p>','</p>');?>
 													</div>
-													<div class="small-12 medium-12 large-12 columns highlight-link">
+</div>
+
+													<div class="small-12 medium-12 large-12 cell highlight-link">
 																<a href="<?php echo esc_url( get_permalink() ); ?>" class="button">Learn More</a>
 													</div>
-									</div>					
+
+									</div>
+
 					</div>
+
 					<?php
 						endwhile;
 					endif;
 					?>
-				</div>
-				<div class="small-12 medium-5 large-4 columns">
-										<div class="small-12 medium-12 large-12 columns stocker-badges-container">
+
+			</div>
+				<div class="small-12 medium-5 large-4 cell">
+
+										<div class="small-12 medium-12 large-12 cell stocker-badges-container">
 											<?php if ( is_active_sidebar( 'badges-sidebar' ) ) { ?>
 																	<?php dynamic_sidebar( 'badges-sidebar' ); ?>
-												<?php } ?>								
+												<?php } ?>
 										</div>
-										<div class="small-12 medium-12 large-12 columns">
+										<!-- <div class="grid-container"> -->
+										<div class="small-12 medium-12 large-12 cell">
 									<?php
-										echo '<div class="small-12 medium-12 large-12 columns lccc_announcement-sub-site">';
-														echo '<div class="small-12 medium-4 large-3 columns lccc_announcement headerlogo">';
+
+										echo '<div class="small-12 medium-12 large-12 cell lccc_announcement-sub-site">';
+echo '<div class="grid-container">';
+														echo '<div class="small-12 medium-4 large-3 cell lccc_announcement headerlogo">';
+
 											echo '<i class="lccc-font-lccc-reverse">'.'</i>';
+
 							echo '</div>';
-							echo '<div class="small-12 medium-8 large-9 columns ">';
-										echo '<h2 class="headertext">'.'Announcments'.'</h2>';
+
+
+							echo '<div class="small-12 medium-8 large-9 cell ">';
+
+										echo '<h2 class="headertext">'.'Announcements'.'</h2>';
+
+										echo '</div>';
 							echo '</div>';
 			echo '</div>';
 													// Announcement Query
@@ -93,8 +118,8 @@ get_header();
 													if ( $stocker_annoucnement_query->have_posts() ) {
 															while ( $stocker_annoucnement_query->have_posts() ) {
 															$stocker_annoucnement_query->the_post();
-															 echo '<div class="small-12 medium-12 large-12 columns sub-announcement-container">';
-																		echo '<div class="small-12 medium-12 large-12 columns">';?>
+															 echo '<div class="small-12 medium-12 large-12 cell sub-announcement-container">';
+																		echo '<div class="small-12 medium-12 large-12 cell">';?>
 																				<a class="announcement-title-link" href="<?php the_permalink(); ?>">
 																					<?php the_title(); ?>
 																				</a>
@@ -108,24 +133,27 @@ get_header();
 													} else {
 														// no posts found
 													}
-													echo '<div class="small-12 medium-12 large-12 columns view-all-athletics-button">';
+													echo '<div class="small-12 medium-12 large-12 cell view-all-athletics-button">';
 							echo '<a href="'.$domain.'stocker/lccc_announcement" class="button">View All Announcements</a>';
 		     echo '</div>';
 										?>
-										
-									</div>					
-				</div>				
-  </section>		
+</div>
+									</div>
+				<!-- </div> -->
+  </section>
 			<?php if ( is_active_sidebar( 'sponsor-sidebar' ) ) { ?>
-				  <div class="column row">
+				  <div class="cell grid-x grid-margin-x">
     <hr />
   </div>
-		<div class="column row">
-  <div class="small-12 medium-12 large-12 columns sponsors-row">
+		<div class="cell grid-x grid-margin-x">
+  <div class="small-12 medium-12 large-12 cell sponsors-row">
 			<?php dynamic_sidebar( 'sponsor-sidebar' ); ?>
-		</div> 
+		</div>
   </div>
-			<?php } ?>			
+
+			<?php } ?>
+		<!-- </div> -->
+	</div>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 <?php get_footer(); ?>

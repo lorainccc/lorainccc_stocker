@@ -8,7 +8,7 @@
  */
 
 ?>
-<?php 
+<?php
 $whattodisplay = 'lccc_announcement';
 				$today = getdate();
 				$currentDay = $today['mday'];
@@ -17,7 +17,7 @@ $whattodisplay = 'lccc_announcement';
 				$firsteventdate ='';
     $nexteventdate ='';
 				$todaysevents = '';
-				$temp = strLen($currentDay);            
+				$temp = strLen($currentDay);
 				$twoDay = '';
 	   $nextTwoDay = '';
     if ($temp < 2){
@@ -38,34 +38,34 @@ $whattodisplay = 'lccc_announcement';
 				}else{
 							$nextTwoDay = $currentDay;
 				}
-		$starteventdate = 
+		$starteventdate =
 			event_meta_box_get_meta('announcement_start_date');
-		$starteventtime = event_meta_box_get_meta('announcement_start_time');  
+		$starteventtime = event_meta_box_get_meta('announcement_start_time');
 		$endeventdate = event_meta_box_get_meta('announcement_end_date');
 		$endtime = event_meta_box_get_meta('announcement_end_time');
-		
+
 
 										$starttimevar=strtotime($starteventtime);
 										$starttime=	date("h:i a",$starttimevar);
 										$starteventtimehours = date("G",$starttimevar);
 										$starteventtimeminutes = date("i",$starttimevar);
-		
+
           $startdate=strtotime($starteventdate);
 										$eventstartdate=date("Y-m-d",$startdate);
 										$eventstartmonth=date("M",$startdate);
                                         $eventstartmonthfull=date("F",$startdate);
 										$eventstartday =date("j",$startdate);
                                         $eventstartyear =date("Y",$startdate);
-										
+
 										$endeventtimevar=strtotime($endtime);
 										$endeventtime = date("h:i a",$endeventtimevar);
 										$endeventtimehours = date("G",$endeventtimevar);
 										$endeventtimeminutes = date("i",$endeventtimevar);
-		
+
 										$enddate=strtotime($endeventdate);
 										$endeventdate = date("Y-m-d",$enddate);
-		
-										
+
+
 		$duration = '';
 		if($endeventtimehours == 0){
 			$endeventtimehours =24;
@@ -75,34 +75,35 @@ $whattodisplay = 'lccc_announcement';
 				if($durationhours == 24){
 				$duration .= '1 day';
 				}else{
-				$duration .= $durationhours.'hrs'; 
+				$duration .= $durationhours.'hrs';
 				}
 		}
 		$durationminutes = $endeventtimeminutes - $starteventtimeminutes;
 		if($durationminutes > 0){
 			$duration .= $durationminutes.'mins';
 		}
-										
-		
-$location = event_meta_box_get_meta('announcement_meta_box_event_location');  
+
+
+$location = event_meta_box_get_meta('announcement_meta_box_event_location');
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-    <div class="small-12 medium-12 large-12 columns">
+	<div class="grid-container">
+    <div class="small-12 medium-12 large-12 cell">
    <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
     </div>
-	<div class="small-12 medium-12 large-12 columns event-image"><?php the_post_thumbnail(); ?></div>
+	<div class="small-12 medium-12 large-12 cell event-image"><?php the_post_thumbnail(); ?></div>
 
-	<div class="small-12 medium-12large-12 columns content-container">
+	<div class="small-12 medium-12large-12 cell content-container">
 	<div class="entry-content">
-        <div class="small-12 medium-12large-12 columns nopadding">
+        <div class="small-12 medium-12large-12 cell nopadding">
 		<?php
 			the_content();
 ?>
         </div>
-        <div class="small-12 medium-4 large-4 columns">
+        <div class="small-12 medium-4 large-4 cell">
        <?php echo '<a href="'.get_post_type_archive_link( $whattodisplay ).'">Back To All Announcements </a>';?>
         </div>
-        <div class="small-12 medium-8 large-8 columns">
+        <div class="small-12 medium-8 large-8 cell">
         <?php
 			wp_link_pages( array(
 				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'lorainccc' ),
@@ -112,6 +113,7 @@ $location = event_meta_box_get_meta('announcement_meta_box_event_location');
         </div>
 	</div><!-- .entry-content -->
 	</div>
+</div>
 	<?php if ( get_edit_post_link() ) : ?>
 
 			<?php

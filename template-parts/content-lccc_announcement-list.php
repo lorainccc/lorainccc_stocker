@@ -8,7 +8,7 @@
  */
 
 ?>
-<?php 
+<?php
 				$today = getdate();
 				$currentDay = $today['mday'];
 				$month = $today['mon'];
@@ -16,7 +16,7 @@
 				$firsteventdate ='';
     $nexteventdate ='';
 				$todaysevents = '';
-				$temp = strLen($currentDay);            
+				$temp = strLen($currentDay);
 				$twoDay = '';
 	   $nextTwoDay = '';
     if ($temp < 2){
@@ -37,34 +37,34 @@
 				}else{
 							$nextTwoDay = $currentDay;
 				}
-		$starteventdate = 
+		$starteventdate =
 			event_meta_box_get_meta('announcement_start_date');
-		$starteventtime = event_meta_box_get_meta('announcement_start_time');  
+		$starteventtime = event_meta_box_get_meta('announcement_start_time');
 		$endeventdate = event_meta_box_get_meta('announcement_end_date');
 		$endtime = event_meta_box_get_meta('announcement_end_time');
-		
+
 
 										$starttimevar=strtotime($starteventtime);
 										$starttime=	date("h:i a",$starttimevar);
 										$starteventtimehours = date("G",$starttimevar);
 										$starteventtimeminutes = date("i",$starttimevar);
-		
+
           $startdate=strtotime($starteventdate);
 										$eventstartdate=date("Y-m-d",$startdate);
 										$eventstartmonth=date("M",$startdate);
                                         $eventstartmonthfull=date("F",$startdate);
 										$eventstartday =date("j",$startdate);
                                         $eventstartyear =date("Y",$startdate);
-										
+
 										$endeventtimevar=strtotime($endtime);
 										$endeventtime = date("h:i a",$endeventtimevar);
 										$endeventtimehours = date("G",$endeventtimevar);
 										$endeventtimeminutes = date("i",$endeventtimevar);
-		
+
 										$enddate=strtotime($endeventdate);
 										$endeventdate = date("Y-m-d",$enddate);
-		
-										
+
+
 		$duration = '';
 		if($endeventtimehours == 0){
 			$endeventtimehours =24;
@@ -74,33 +74,34 @@
 				if($durationhours == 24){
 				$duration .= '1 day';
 				}else{
-				$duration .= $durationhours.'hrs'; 
+				$duration .= $durationhours.'hrs';
 				}
 		}
 		$durationminutes = $endeventtimeminutes - $starteventtimeminutes;
 		if($durationminutes > 0){
 			$duration .= $durationminutes.'mins';
 		}
-										
-		
-$location = event_meta_box_get_meta('announcement_meta_box_event_location');  
+
+
+$location = event_meta_box_get_meta('announcement_meta_box_event_location');
 $cost = event_meta_box_get_meta('announcement_meta_box_ticket_price_s_');
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<?php
 	if ( has_post_thumbnail() ) {
 	?>
-	<div class="small-12 medium-3 large-4 columns">
+	<div class="grid-container">
+	<div class="small-12 medium-3 large-4 cell">
 	<?php the_post_thumbnail();?>
  </div>
-	<div class="small-12 medium-9 large-8 columns nopadding">
-		<div class="small-12 medium-12 large-12 columns">
+	<div class="small-12 medium-9 large-8 cell nopadding">
+		<div class="small-12 medium-12 large-12 cell">
 		<header class="entry-header">
         <a href="<?php the_permalink();?>"><?php the_title( '<h1 class="entry-title">', '</h1>' ); ?></a>
         <?php the_category( ', ' ); ?>
 	</header><!-- .entry-header -->
 		</div>
-	<div class="small-12 medium-12 large-12 columns">
+	<div class="small-12 medium-12 large-12 cell">
 	<div class="entry-content">
 		<?php
 			the_excerpt();
@@ -115,18 +116,20 @@ $cost = event_meta_box_get_meta('announcement_meta_box_ticket_price_s_');
 	</div><!-- .entry-content -->
 	</div>
 	</div>
+</div>
 	<?php
 	//Closes the If Has Thumbnail and opens elase in case post doesnt has a featured image
 	}else{
 	?>
-		<div class="small-12 medium-12 large-12 columns nopadding">
-		<div class="small-12 medium-12 large-12 columns">
+	<div class="grid-container">
+		<div class="small-12 medium-12 large-12 cell nopadding">
+		<div class="small-12 medium-12 large-12 cell">
 		<header class="entry-header">
         <a href="<?php the_permalink();?>"><?php the_title( '<h1 class="entry-title">', '</h1>' ); ?></a>
         <?php the_category( ', ' ); ?>
 	</header><!-- .entry-header -->
 		</div>
-	<div class="small-12 medium-12 large-12 columns">
+	<div class="small-12 medium-12 large-12 cell">
 	<div class="entry-content">
 		<?php
 			the_excerpt();
@@ -141,7 +144,7 @@ $cost = event_meta_box_get_meta('announcement_meta_box_ticket_price_s_');
 	</div><!-- .entry-content -->
 	</div>
 	</div>
-	
+</div>
 	<?php }//Closes the Else of If Has PostThumbnail ?>
 		<?php if ( get_edit_post_link() ) : ?>
 
@@ -158,6 +161,8 @@ $cost = event_meta_box_get_meta('announcement_meta_box_ticket_price_s_');
 			?>
 	<?php endif; ?>
 </article><!-- #post-## -->
-<div class="column row">
+<div class="grid-container">
+<div class="cell grid-x grid-margin-x">
         <hr>
       </div>
+</div>

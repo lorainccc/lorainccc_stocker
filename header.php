@@ -27,13 +27,13 @@
   ga('send', 'pageview');
 
 </script>
-	
+
 <!-- Begin Eloqua tracking script -->
 <script type="text/javascript">
     var _elqQ = _elqQ || [];
     _elqQ.push(['elqSetSiteId', '577764303']);
     _elqQ.push(['elqTrackPageView']);
-    
+
     (function () {
         function async_load() {
             var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true;
@@ -41,7 +41,7 @@
             var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
         }
         if (window.addEventListener) window.addEventListener('DOMContentLoaded', async_load, false);
-        else if (window.attachEvent) window.attachEvent('onload', async_load); 
+        else if (window.attachEvent) window.attachEvent('onload', async_load);
     })();
 </script>
 <!-- End Eloqua tracking script -->
@@ -51,39 +51,29 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'lccc-framework' ); ?></a>
 
 	<header id="masthead" class="site-header" role="banner">
-		  <div class="row show-for-medium">
-    <div class="large-6 medium-6 columns"><a href="<?php echo esc_url( home_url( '' ) ); ?>"><img src="https://www.lorainccc.edu/stocker/wp-content/uploads/sites/69/2016/07/Stocker-Arts-Ctr-header-logo.png" height="80" width="340" alt="Lorain County Community College Logo" /></a>  </div>
-    <div class="large-6 medium-6 columns">
+    <div class="grid-container">
+		  <div class="grid-x grid-margin-x show-for-medium">
+    <div class="large-6 medium-6 cell"><a href="<?php echo esc_url( home_url( '' ) ); ?>"><img src="https://www.lorainccc.edu/stocker/wp-content/uploads/sites/69/2016/07/Stocker-Arts-Ctr-header-logo.png" height="80" width="340" alt="Lorain County Community College Logo" /></a>  </div>
+    <div class="large-6 medium-6 cell">
       <ul id="header-menu" class="menu align-right">
         <li><a href="https://www.lorainccc.edu/" class="ql-icon ql-3" alt="Lorain County Community College Home" target="_blank">LCCC Home</a></li>
 							 <li><a href="http://maildogmanager.com/surveys/usrC3prd/sub_preferences.html?client=usrC3prd" alt="Subscribe to Stocker Arts Center Mailiing List" class="ql-icon ql-2" target="_blank">Subscribe</a></li>
         <li><a href="http://sa1.seatadvisor.com/sabo/servlets/EventSearch?presenter=STOCKER" alt="Buy Tickets" class="ql-icon ql-4">Buy Tickets</a></li>
       </ul>
       <!-- This should be similar to what is generated when using Wordpress searchform.php -->
-					   <div class="large-9 medium-6 columns searchbox hide-for-print">
-          <?php if ( is_active_sidebar( 'lccc-search-sidebar' ) ) { ?>
-																<?php dynamic_sidebar( 'lccc-search-sidebar' ); ?>
-								<?php }else{
-															if ( class_exists( 'CustomGoogleSearch' ) ) {
-																// check for plugin using plugin name
-																// Plugin is activated
-																		if ( is_active_sidebar( 'lccc-four-o-four-sidebar' ) ) {
-
-																		}else{
-																			$instance = array(
-																			'display_results' => '3',
-																		);                                               the_widget('CGS_Widget', $instance);
-																			}
-															}else{
-																echo 'no widgets found';
-															}
-								}		?>
+      <div class="grid-x grid-margin align-right">
+					   <div class="large-9 medium-6 cell searchbox hide-for-print">
+        <?php
+										the_widget('WP_Widget_Search');
+								?>
 					</div>
+        </div>
     </div>
   </div>
+</div>
 <div class="medium-blue-bg show-for-medium">
-    <div class="row">
-      <div class="large-12 columns">
+    <div class="grid-x grid-margin-x">
+      <div class="large-12 cell">
         <nav class="menu-centered">
 									<?php
           wp_nav_menu(array(
@@ -101,16 +91,16 @@
       </div>
     </div>
   </div>
-  <div class="row show-for-small-only mobile-nav-bar">
-    <div class="small-8 columns"> <a href="/stocker"><img style="margin-top: -1.3rem;" src="https://www.lorainccc.edu/stocker/wp-content/uploads/sites/69/2016/07/Stocker-Arts-Ctr-logo.svg" alt="LCCC Stocker Logo"/></a> </div>
-    <div class="small-2 columns clearfix"> <span data-responsive-toggle="mobile-search" data-hide-for="medium"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/icons/magnifying-glass.svg" height="25" width="25" alt="" class="float-right" data-toggle/></span> </div>
-    <div class="small-2 columns"> <span data-responsive-toggle="responsive-menu" data-hide-for="medium">
+  <div class="grid-x grid-margin-x show-for-small-only mobile-nav-bar">
+    <div class="small-8 cell"> <a href="/stocker"><img style="margin-top: -1.3rem;" src="https://www.lorainccc.edu/stocker/wp-content/uploads/sites/69/2016/07/Stocker-Arts-Ctr-logo.svg" alt="LCCC Stocker Logo"/></a> </div>
+    <div class="small-2 cell clearfix"> <span data-responsive-toggle="mobile-search" data-hide-for="medium"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/icons/magnifying-glass.svg" height="25" width="25" alt="" class="float-right" data-toggle/></span> </div>
+    <div class="small-2 cell"> <span data-responsive-toggle="responsive-menu" data-hide-for="medium">
       <button class="menu-icon" type="button" data-toggle></button>
       </span> </div>
   </div>
   <div id="mobile-search" class="show-for-small-only">
-    <div class="row">
-      <div class="small-12 columns">
+    <div class="grid-x grid-margin-x">
+      <div class="small-12 cell">
         <form role="search" method="get" class="search-form" action="">
           <label>
             <input type="search" placeholder="Search" name="s" />

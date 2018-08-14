@@ -7,17 +7,18 @@
  * @package LCCC Framework
  */
 get_header(); ?>
-<div class="row page-content">
-<div class="small-12 medium-12 large-12 columns breadcrumb-container">
+<div class="grid-container">
+<div class="grid-x grid-margin-x page-content">
+<div class="small-12 medium-12 large-12 cell breadcrumb-container">
    <?php get_template_part( 'template-parts/content', 'breadcrumb' ); ?>
 </div>
-<div class="medium-4 large-4 columns hide-for-small-only">
-	<div class="small-12 medium-12 large-12 columns sidebar-widget">
-		<div class="small-12 medium-12 large-12 columns sidebar-menu-header">
+<div class="medium-4 large-4 cell hide-for-small-only">
+	<div class="small-12 medium-12 large-12 cell sidebar-widget">
+		<div class="small-12 medium-12 large-12 cell sidebar-menu-header">
 <h3><?php echo bloginfo('the-title'); ?></h3>
 		</div>
 	<?php	if ( has_nav_menu( 'stocker-left-nav' ) ) : ?>
-	<div id="secondary" class="medium-12 columns secondary nopadding">
+	<div id="secondary" class="medium-12 cell secondary nopadding">
 		<?php if ( has_nav_menu( 'stocker-left-nav' ) ) : ?>
 			<nav id="site-navigation" class="main-navigation" role="navigation">
 				<?php
@@ -33,7 +34,7 @@ get_header(); ?>
 		<?php endif; ?>
 	</div>
 	</div>
-	<div class="small-12 medium-8 large-8 columns">
+	<div class="small-12 medium-8 large-8 cell">
 <div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
@@ -41,7 +42,7 @@ get_header(); ?>
 			// get the currently queried taxonomy term, for use later in the template file
 
 $term = get_queried_object();
-      
+
 					$paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
 
      $args = array(
@@ -52,7 +53,7 @@ $term = get_queried_object();
     //'paged' => $paged,
 //    'order'=> 'ASC',
 //    'orderby'=> 'meta_value',
-//				'paged' => $paged,		
+//				'paged' => $paged,
 //    'meta_key' => 'event_start_date',
     'meta_query' => array(
     'relation' => 'AND',
@@ -137,15 +138,15 @@ $location = event_meta_box_get_meta('event_meta_box_event_location');
 $cost = event_meta_box_get_meta('event_meta_box_ticket_price_s_');
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-		<?php 
+		<?php
 if ( has_post_thumbnail() ) { ?>
-		<div class="small-12 medium-12 large-4 columns" style=" padding-left: 0;padding-right: 0.6rem;margin-top: 0.8rem;">
+		<div class="small-12 medium-12 large-4 cell" style=" padding-left: 0;padding-right: 0.6rem;margin-top: 0.8rem;">
 	<?php
 							the_post_thumbnail();
 		?>
  </div>
-	<div class="small-12 medium-10 large-8 columns nopadding">
-	<div class="small-12 medium-12 large-12 columns nopadding">
+	<div class="small-12 medium-10 large-8 cell nopadding">
+	<div class="small-12 medium-12 large-12 cell nopadding">
 		<header class="entry-header">
         <a href="<?php the_permalink();?>"><?php the_title( '<h1 class="entry-title">', '</h1>' ); ?></a>
        <div class="taxonomies">
@@ -159,7 +160,7 @@ if ( has_post_thumbnail() ) { ?>
 
 	</header><!-- .entry-header -->
 	</div>
-	<div class="small-12 medium-12 large-12 columns nopadding">
+	<div class="small-12 medium-12 large-12 cell nopadding">
 	<div class="entry-content">
 		<?php
 			the_excerpt();
@@ -188,11 +189,11 @@ if ( has_post_thumbnail() ) { ?>
 			?>
 	<?php endif; ?>
 </div>
-	
-	
+
+
 	<?php }else{ ?>
-	<div class="small-12 medium-10 large-12 columns nopadding">
-	<div class="small-12 medium-12 large-12 columns nopadding">
+	<div class="small-12 medium-10 large-12 cell nopadding">
+	<div class="small-12 medium-12 large-12 cell nopadding">
 		<header class="entry-header">
         <a href="<?php the_permalink();?>"><?php the_title( '<h1 class="entry-title">', '</h1>' ); ?></a>
        <div class="taxonomies">
@@ -206,7 +207,7 @@ if ( has_post_thumbnail() ) { ?>
 
 	</header><!-- .entry-header -->
 	</div>
-	<div class="small-12 medium-12 large-12 columns nopadding">
+	<div class="small-12 medium-12 large-12 cell nopadding">
 	<div class="entry-content">
 		<?php
 			the_excerpt();
@@ -237,7 +238,7 @@ if ( has_post_thumbnail() ) { ?>
 </div>
 	<?php } ?>
 	</article><!-- #post-## -->
-<div class="column row event-list-row">
+<div class="cell grid-x grid-margin-x event-list-row">
     <hr>
   </div>
 
@@ -245,7 +246,7 @@ if ( has_post_thumbnail() ) { ?>
 <div id="pagination" class="clearfix">
   <div style="float:left;"><?php previous_posts_link( 'Previous Events' ); ?></div>
   <div style="float:right;"><?php next_posts_link( 'More Events', $query->max_num_pages ); ?></div>
-</div>			
+</div>
 
 			<?php
 			// use reset postdata to restore orginal query
@@ -261,5 +262,6 @@ endif; // end of check for query having posts
 	</div><!-- #primary -->
 </div>
 
+</div>
 </div>
 <?php get_footer(); ?>

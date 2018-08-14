@@ -91,7 +91,8 @@ $cost = event_meta_box_get_meta('event_meta_box_ticket_price_s_');
 	$eventsubheading = event_meta_box_get_meta('event_meta_box_sub_heading');
 ?>
 <article id="post-<?php the_ID(); ?>">
-    <div class="small-12 medium-12 large-12 columns">
+	<div class="grid-container">
+    <div class="small-12 medium-12 large-12 cell">
    <?php the_title( '<h1 class="entry-title indiv-event">', '</h1>' ); ?>
 			<?php
 					if( $eventsubheading != ''){
@@ -101,17 +102,17 @@ $cost = event_meta_box_get_meta('event_meta_box_ticket_price_s_');
 					}
 					?>
     </div>
-	<div class="small-12 medium-2 large-2 columns">
+	<div class="small-12 medium-2 large-2 cell">
 	<?php
-			echo '<div class="small-12 medium-12 large-12 columns event-date">';
-        echo '<div class="small-12 medium-12 large-12 columns calendar">';
+			echo '<div class="small-12 medium-12 large-12 cell event-date">';
+        echo '<div class="small-12 medium-12 large-12 cell calendar">';
 										echo '<p class="stocker-month">'.$eventstartmonth.'</p>';
 										echo '<p class="stocker-day">'.$eventstartday.'</p>';
 						echo '</div>';
 			echo '</div>';
 		?>
  </div>
-	<div class="small-12 medium-10 large-10 columns nopadding">
+	<div class="small-12 medium-10 large-10 cell nopadding">
 	<header class="entry-header">
 <div class="taxonomies">
 	<?php echo get_the_term_list( $post->ID, 'event_categories','', ' , ' , ''); ?>
@@ -127,17 +128,17 @@ $cost = event_meta_box_get_meta('event_meta_box_ticket_price_s_');
 								<?php } ?>
 		</header><!-- .entry-header -->
 	</div>
-	<div class="small-12 medium-12large-12 columns content-container">
+	<div class="small-12 medium-12large-12 cell content-container">
 	<div class="entry-content">
-        <div class="small-12 medium-12large-12 columns nopadding">
+        <div class="small-12 medium-12large-12 cell nopadding">
 		<?php
 			the_content();
 ?>
         </div>
-        <div class="small-12 medium-4 large-4 columns nopadding">
+        <div class="small-12 medium-4 large-4 cell nopadding">
        <?php echo '<br /> <br /> <a class="button" href="'.get_post_type_archive_link( 'lccc_events' ).'">Back To All Events </a>';?>
         </div>
-        <div class="small-12 medium-8 large-8 columns">
+        <div class="small-12 medium-8 large-8 cell">
         <?php
 			wp_link_pages( array(
 				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'lorainccc' ),
@@ -147,6 +148,7 @@ $cost = event_meta_box_get_meta('event_meta_box_ticket_price_s_');
         </div>
 	</div><!-- .entry-content -->
 	</div>
+</div>
 	<?php if ( get_edit_post_link() ) : ?>
 
 			<?php
