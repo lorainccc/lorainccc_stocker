@@ -170,7 +170,7 @@ if ( has_post_thumbnail() ) { ?>
 	<?php }else{ ?>
 			<div class="small-12 medium-12 large-12 cell nopadding">
                         <header class="entry-header">
-        <a href="<?php the_permalink();?>"><?php the_title( '<h1 class="entry-title">', '</h1>' ); ?></a>
+        <a href="<?php the_permalink();?>"><?php the_title( '<h2 class="entry-title">', '</h2>' ); ?></a>
 			<div class="taxonomies">
 				<?php echo get_the_term_list( $post->ID, 'event_categories','', ' , ' , ''); ?>
 			</div>
