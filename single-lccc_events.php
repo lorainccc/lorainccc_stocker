@@ -13,7 +13,7 @@ get_header(); ?>
 <div class="medium-4 large-4 columns hide-for-small-only">
 	<div class="small-12 medium-12 large-12 columns sidebar-widget">
 		<div class="small-12 medium-12 large-12 columns sidebar-menu-header">
-		<h3>SIDEBAR MENU</h3>
+		<h3>Stocker Arts Center</h3>
 		</div>
 	<?php	if ( has_nav_menu( 'stocker-left-nav' ) ) : ?>
 	<div id="secondary" class="medium-12 columns secondary nopadding">
