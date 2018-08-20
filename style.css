@@ -85,7 +85,7 @@ hr{border:0;height:20px;width:90%;height:50px;padding:2rem 0;-webkit-box-shadow:
 #home-news a.read-more{font-size:.75rem;color:#5593db;font-weight:800;text-decoration:underline;line-height:100%}
 #home-news hr{margin:-80px auto 40px}#home-news a.all-news{margin-top:3rem}.aside-header{background:#0c3b78;color:#fefefe;margin-top:2rem;padding:.5rem 0}
 .aside-header h3{font-size:1.75rem;font-weight:700;margin-bottom:0}.sidebar-menu-header{background:#0c3b78;color:#fefefe;padding:.5rem}
-.sidebar-menu-header h3{text-transform:uppercase;font-size:1.125rem;font-weight:700;margin-bottom:0}
+.sidebar-menu-header h3{text-transform:uppercase;font-size:1.125rem;font-weight:700;margin-bottom:0;color:#fff}
 .recent-events,.announcements{-webkit-box-shadow:inset 0 0 10px #dcdcdc;box-shadow:inset 0 0 10px #dcdcdc;padding:1rem}
 .recent-events h4,.announcements h4{font-size:.75rem;font-weight:800;color:#0055a5;margin-bottom:.25rem;text-transform:uppercase}
 .recent-events a:not(.button),.announcements a:not(.button){font-weight:700;text-decoration:underline;font-size:.75rem}
