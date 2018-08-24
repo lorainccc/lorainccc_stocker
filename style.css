@@ -173,7 +173,7 @@ header .dropdown.menu>li.is-dropdown-submenu-parent>a{padding-right:1rem}header 
 .dropdown-toggle:after{font-size:16px;line-height:24px;width:24px}.main-navigation ul ul{margin-left:1em;border-top:0;border-bottom:0;display:none}
 .clear:before,.clear:after,.site:before,.site:after,.entry-content:before,.entry-content:after,.comment-content:before,.comment-content:after,.site-content:before,.site-content:after,.nav-links:before,.nav-links:after,.comment-navigation:before,.comment-navigation:after,.social-navigation ul:before,.social-navigation ul:after,.textwidget:before,.textwidget:after{content:"";display:table}
 .clear:after,.site:after,.entry-content:after,.comment-content:after,.site-content:after,.nav-links:after,.comment-navigation:after,.social-navigation ul:after,.textwidget:after{clear:both}
-ul.sub-menu{padding-top:15px}/*!
+ul.sub-menu{padding-top:15px}.dropdown .menu-item{z-index:50}/*!
 Section 6: Footer
 */footer{margin-top:5rem;background:#0c3b78;padding:2rem 0 4rem 0;font-size:.75rem}
 footer h2{font-size:.75rem;color:#ffc600;text-transform:uppercase;font-weight:700}
