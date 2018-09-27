@@ -25,7 +25,7 @@
     <div class="large-6 medium-6 columns">
       <ul id="header-menu" class="menu align-right">
         <li><a href="https://www.lorainccc.edu/" class="ql-icon ql-3" alt="Lorain County Community College Home" target="_blank">LCCC Home</a></li>
-							 <li><a href="https://www.lorainccc.edu/about/contact-lorain-county-community-college/" alt="Subscribe to Stocker Arts Center Mailiing List" class="ql-icon ql-2" target="_blank">Subscribe</a></li>
+							 <li><a href="https://www.lorainccc.edu/about/subscribe-to-lccc-news/" alt="Subscribe to Stocker Arts Center Mailiing List" class="ql-icon ql-2" target="_blank">Subscribe</a></li>
         <li><a href="http://sa1.seatadvisor.com/sabo/servlets/EventSearch?presenter=STOCKER" alt="Buy Tickets" class="ql-icon ql-4">Buy Tickets</a></li>
       </ul>
       <!-- This should be similar to what is generated when using Wordpress searchform.php -->
