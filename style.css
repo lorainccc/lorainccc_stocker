@@ -197,5 +197,7 @@ aside.columns{padding-right:.9375rem !important;padding-left:.9375rem !important
 }@media screen and (max-width:39.9375em){h1{font-size:1.35rem;line-height:105%}.white-panel{margin-top:3rem}
 .cta-icons{margin-bottom:2rem}.footer-sm-links{width:210px;margin:0 auto 1rem auto}
 .footer-sm-links li a{padding:0}.footer-sm-links li a img{margin:0 .25rem}footer .row .columns{border-bottom:1px solid #5593db;padding:2rem 0 1rem 0}
-footer{padding-bottom:0}}@media all and (-ms-high-contrast:none),(-ms-high-contrast:active){div.row hr{margin:-80px auto 40px;height:10px;padding:1rem 0;width:100%}
+footer{padding-bottom:0}div.medium-blue-bg{width:100%;background:#fff}nav.menu-centered{text-align:left}
+ul.menu-primary-menu * li a:hover,ul.menu-primary-menu * li a:active{color:#0c3b78}
+}@media all and (-ms-high-contrast:none),(-ms-high-contrast:active){div.row hr{margin:-80px auto 40px;height:10px;padding:1rem 0;width:100%}
 }
