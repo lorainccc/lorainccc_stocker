@@ -6,7 +6,7 @@
  */
 
 jQuery(document).ready(function(){
-	if (jQuery(window).width() < 720 ){
+	if (jQuery(window).width() < 450 ){
 		jQuery('#menu-primary-menu').removeClass('dropdown menu');
 		jQuery('#menu-primary-menu').wrap("<div class='is-drilldown' style='min-height: 175px; max-width: 400;px;'></div>");
 		jQuery('#menu-primary-menu').wrap("<ul id='mobile-menu' class='vertical menu' data-drilldown data-parent-link='true' role='menubar'></ul>");
