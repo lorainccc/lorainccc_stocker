@@ -32,9 +32,9 @@
         <li><a href="https://www.lorainccc.edu/stocker/about-the-stocker-arts-center/map-and-directions-to-the-stocker-arts-center/" title="Map and Directions to LCCC">Map and Directions</a></li>
       </ul>
     </div>
-    <div class="large-4 medium-4 columns">
+    <div class="large-4 medium-4 columns" aria-labelledby="menu-footer-quicklinks">
       <h2>Quick Links</h2>
-      <ul class="underline">
+      <ul id="menu-footer-quicklinks" class="underline">
         <li><a href="https://www.lorainccc.edu" title="Visit LCCC's Home page">Lorain County Community College</a></li>
         <li><a href="https://www.lorainccc.edu/stocker/wp-content/uploads/sites/69/2016/07/HokeTheatreSeatingChart7.21.16.pdf" title="View the Hoke Theatre Seating Chart">Hoke Theatre Seating Chart</a></li>
       </ul>
