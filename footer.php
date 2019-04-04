@@ -21,7 +21,13 @@
       <a href="https://www.lorainccc.edu/campus-technology/lccc-mobile/" title="Download LCCC's Mobile App" target="_blank" class="clearfix mobile-app-link"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/icons/smartphone_yellow.svg" heigth="33" width="20" alt="Download LCCC's Mobile App"/>
       <h2>LCCC'S<br />
         Mobile App</h2>
-      </a> </div>
+      </a> 
+      <?php if($_GET['siteurl'] == ''){ ?>
+     <p class="website-feedback">
+      <a href="/website-feedback?siteurl=<?php echo 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']; ?>" title="Provide Feedback about this Page" target="_blank">Feedback about this page</a>
+     </p>
+     <?php } ?>
+      </div>
     <div class="large-4 medium-4 columns">
       <h2>Contact Stocker</h2>
       <p>Lorain County Community College<br />Stocker Arts Center<br />1005 N. Abbe Road<br />
