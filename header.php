@@ -17,22 +17,22 @@
 </head>
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'lccc-framework' ); ?></a>
+	<a class="show-on-focus hide-for-print" href="#content"><?php esc_html_e( 'Skip to content', 'lccc-framework' ); ?></a>
 
 	<header id="masthead" class="site-header" role="banner">
   <div class="row show-for-small-only mobile-nav-bar">
-    <div class="small-8 columns"> <a href="/stocker"><img style="margin-top: -1.3rem;" src="https://www.lorainccc.edu/stocker/wp-content/uploads/sites/69/2016/07/Stocker-Arts-Ctr-logo.svg" alt="LCCC Stocker Logo"/></a> </div>
-    <div class="small-2 columns clearfix"> <span data-responsive-toggle="mobile-search" data-hide-for="medium"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/icons/magnifying-glass.svg" height="25" width="25" alt="Search the LCCC Stocker Arts Center Website" class="float-right" data-toggle/></span> </div>
+    <div class="small-8 columns"> <a href="/stocker"><img style="margin-top: -1.3rem;" src="https://www.lorainccc.edu/stocker/wp-content/uploads/sites/69/2016/07/Stocker-Arts-Ctr-logo.svg" alt="LCCC Stocker Home"/></a> </div>
+    <div class="small-2 columns clearfix"> <button data-responsive-toggle="mobile-search" data-hide-for="medium"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/icons/magnifying-glass.svg" height="25" width="25" alt="Toggle LCCC Website Search" class="float-right" data-toggle/></button> </div>
     <div class="small-2 columns"> <span data-responsive-toggle="responsive-menu" data-hide-for="medium">
-      <button class="menu-icon" type="button" data-toggle></button>
+      <button class="menu-icon" type="button" data-toggle>Toggle Main Menu</button>
       </span> </div>
   </div>
     <div class="row">
-      <div class="hide-for-small-only large-6 medium-6 columns"><a href="<?php echo esc_url( home_url( '' ) ); ?>"><img src="https://www.lorainccc.edu/stocker/wp-content/uploads/sites/69/2016/07/Stocker-Arts-Ctr-header-logo.png" height="80" width="340" alt="Lorain County Community College Logo" /></a>  </div>
+      <div class="hide-for-small-only large-6 medium-6 columns"><a href="<?php echo esc_url( home_url( '' ) ); ?>"><img src="https://www.lorainccc.edu/stocker/wp-content/uploads/sites/69/2016/07/Stocker-Arts-Ctr-header-logo.png" height="80" width="340" alt="Stocker Arts Center Home" /></a>  </div>
         <div class="large-6 medium-6 columns">
           <div class="row">
             <div class="hide-for-small-only medium-12 columns">
-              <ul id="header-menu" class="menu align-right">
+              <ul role="presentaton" id="header-menu" class="menu align-right">
                 <li><a href="https://www.lorainccc.edu/" class="ql-icon ql-3" alt="Lorain County Community College Home" target="_blank">LCCC Home</a></li>
                       <li><a href="https://www.lorainccc.edu/about/contact-lorain-county-community-college/" alt="Subscribe to Stocker Arts Center Mailiing List" class="ql-icon ql-2" target="_blank">Subscribe</a></li>
                 <li><a href="http://sa1.seatadvisor.com/sabo/servlets/EventSearch?presenter=STOCKER" alt="Buy Tickets" class="ql-icon ql-4">Buy Tickets</a></li>
@@ -42,9 +42,10 @@
           <div class="row">
           <!-- This should be similar to what is generated when using Wordpress searchform.php -->
             <div id="mobile-search" class="small-12 medium-9 medium-offset-3 columns searchbox hide-for-print">
-            <?php 
+                <form role="search"><?php 
                         the_widget('WP_Widget_Search');
                     ?>
+                </form>
             </div>
           </div>
       </div>
