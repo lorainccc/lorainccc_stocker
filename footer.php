@@ -23,7 +23,7 @@
       </a> 
       <?php if($_GET['siteurl'] == ''){ ?>
      <p class="website-feedback">
-      <a href="/website-feedback?siteurl=<?php echo 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']; ?>" title="Provide Feedback about this Page" target="_blank">Feedback about this page</a>
+      <a href="/website-feedback?siteurl=<?php echo 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']; ?>" title="" target="_blank">Feedback about this page</a>
      </p>
      <?php } ?>
       </div>
@@ -33,7 +33,7 @@
         Elyria, OH 44054<br />
        (440) 366-4040<br />
         <!--<a href="mailto:email@emailaddress.com">email@emailaddress.com</a>--> </p>
-      <ul role="presenation" class="underline">
+      <ul role="presentation" class="underline">
         <li><a href="https://www.lorainccc.edu/stocker/about-the-stocker-arts-center/map-and-directions-to-the-stocker-arts-center/" title="">Map and Directions</a></li>
       </ul>
     </div>
