@@ -14,8 +14,12 @@
     <div class="large-4 medium-4 columns"> <img class="footer-logo" src="https://www.lorainccc.edu/stocker/wp-content/uploads/sites/69/2016/07/Stocker-Arts-Ctr-logo.svg" alt="LCCC Stocker Footer Logo" width="260" height="82.5"/>
       <h2>Connect with Stocker</h2>
       <ul role="presentation" class="menu footer-sm-links">
-        <li><a href="https://www.facebook.com/Stocker-Arts-Center-83843213363/?fref=ts" title="Follow Stocker Arts Center on Facebook"  target="_blank"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/icons/facebook_white.svg" height="30" width="30" alt="Follow Stocker Arts Center on Facebook" /></a></li>
-        <li><a href="https://twitter.com/StockerArts" target="_blank" title="Follow Stocker Arts Center on Twitter"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/icons/twitter_white.svg" height="30" width="30" alt="Follow Stocker Arts Center on Twitter" /></a></li>
+        <li><a href="https://www.facebook.com/Stocker-Arts-Center-83843213363/?fref=ts" title=""  target="_blank"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/icons/facebook_white.svg" height="30" width="30" alt="Follow Stocker Arts Center on Facebook" /></a></li>
+        <li><a href="https://twitter.com/StockerArts" target="_blank" title=""><img src="<?php bloginfo('stylesheet_directory'); ?>/images/icons/twitter_white.svg" height="30" width="30" alt="Follow Stocker Arts Center on Twitter" /></a>
+        </li><a href="https://www.instagram.com/stockerarts/" target="_blank" title=""><img src="<?php bloginfo('stylesheet_directory')" ?>/images/icons/instagram_white.svg" height="30" width="30" alt="Follow Stocker Arts Center on Instagram"</a>
+        <li>
+            
+        </li>
        
       </ul>
       <a href="https://www.lorainccc.edu/campus-technology/lccc-mobile/" title="" target="_blank" class="clearfix mobile-app-link"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/icons/smartphone_yellow.svg" heigth="33" width="20" alt=""/>
