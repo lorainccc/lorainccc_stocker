@@ -16,9 +16,8 @@
       <ul role="presentation" class="menu footer-sm-links">
         <li><a href="https://www.facebook.com/Stocker-Arts-Center-83843213363/?fref=ts" title=""  target="_blank"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/icons/facebook_white.svg" height="30" width="30" alt="Follow Stocker Arts Center on Facebook" /></a></li>
         <li><a href="https://twitter.com/StockerArts" target="_blank" title=""><img src="<?php bloginfo('stylesheet_directory'); ?>/images/icons/twitter_white.svg" height="30" width="30" alt="Follow Stocker Arts Center on Twitter" /></a>
-        </li><a href="https://www.instagram.com/stockerarts/" target="_blank" title=""><img src="<?php bloginfo('stylesheet_directory')" ?>/images/icons/instagram_white.svg" height="30" width="30" alt="Follow Stocker Arts Center on Instagram"</a>
-        <li>
-            
+          </li>
+        <li><a href="https://www.instagram.com/stockerarts/" target="_blank" title=""><img src="<?php bloginfo('stylesheet_directory'); ?>/images/icons/instagram_white.svg" height="30" width="30" alt="Follow Stocker Arts Center on Instagram" /></a>
         </li>
        
       </ul>
