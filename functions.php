@@ -50,12 +50,13 @@ function lorainccc_setup() {
 		'footer-campus-location-nav' => esc_html__( 'Footer Campus Locations', 'lorainccc' ),
 		'mobile-primary' => esc_html__( 'Mobile Primary Menu', 'lorainccc_subsite' ),
 		'header-shortcuts' => esc_html__( 'Header Shortcuts Menu', 'lorainccc' ),
-  'mobile-header-shortcuts' => esc_html__( 'Mobile Header Shortcuts Menu', 'lorainccc' ),
+        'mobile-header-shortcuts' => esc_html__( 'Mobile Header Shortcuts Menu', 'lorainccc' ),
 		'stocker-primary' => esc_html__( 'Stocker Menu', 'lorainccc' ),
 		'stocker-mobile-primary' => esc_html__( 'Mobile Primary Menu', 'lorainccc' ),
 		'stocker-left-nav' => esc_html__( 'Stocker Left Nav', 'lorainccc' ),
 		'about-menu' => esc_html__( 'About Menu', 'lorainccc' ),
-		'visual-art-menu' => esc_html__( 'Visual Art Menu', 'lorainccc' ),		
+		'visual-art-menu' => esc_html__( 'Visual Art Menu', 'lorainccc' ),
+		'stocker-footer-quicklinks-menu' => esc_html__( 'Stocker Footer Quicklinks Menu', 'lorainccc' ),		
 	) );
 	/*
 	 * Switch default core markup for search form, comment form, and comments

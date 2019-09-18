@@ -41,7 +41,7 @@ p{font-weight:500;font-size:1rem;font-family:'Open Sans',sans-serif}
 a,a:focus{font-family:'Open Sans',sans-serif;color:#0055a5;font-weight:500}
 /*! Base Typography *//*! Typography Helpers *//*!
 Section 1: Foundation
-*//*! Section 2: Content */div.entry-content a,a:focus{text-decoration:underline}
+*//*! Section 2: Content */div.entry-content a,div.taxonomies a,a:focus{text-decoration:underline}
 a:focus{text-decoration:underline}div.content table thead,table tbody,table tfoot{border:0}
 .columns.view-all-link a.button.expand{margin-top:21px}.column.row.event-list-row hr{border:0;height:20px;width:90%;height:50px;padding:.5rem 0;-webkit-box-shadow:0 15px 15px -15px #dcdcdc;box-shadow:0 15px 15px -15px #dcdcdc;margin:-50px auto 10px}
 div.row hr{margin:-80px auto 40px;height:10px;padding:3rem 0;width:100%}.columns.event-container{margin-top:35px}
