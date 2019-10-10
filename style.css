@@ -145,7 +145,7 @@ header .submenu li{text-align:left}header .dropdown.menu .submenu li:hover{backg
 header .dropdown.menu .submenu li:hover a{color:#0c3b78}header li.is-submenu-item:not(.is-drilldown-submenu-item) a{color:#fefefe;font-size:.75rem}
 header li.is-drilldown-submenu-item{padding:0}header .dropdown.menu .submenu.first-sub{left:-1rem}
 header .dropdown.menu>li.is-dropdown-submenu-parent>a{padding-right:1rem}header .dropdown.menu>li.is-dropdown-submenu-parent>a::after{display:none}
-nav ul a,nav ul a:hover{color:#fefefe;font-size:.875rem;font-weight:600}footer li a{font-weight:300;font-size:.75rem}
+nav ul a,nav ul a:hover{color:#fefefe;font-size:.875rem;font-weight:600}footer li a,footer li a:hover,footer li a:focus{font-weight:300;font-size:.75rem;color:#fff}
 .medium-blue-bg{width:100%;background:#0055a5;margin-top:1.5rem}li.divider:after{content:"|";color:#5593db}
 .ql-icon{background-position:left center;background-repeat:no-repeat;background-size:.78125rem .78125rem}
 .ql-1{background-image:url(/wp-content/themes/lorainccc/images/icons/icon-az_blue.svg)}.ql-2{background-image:url(/wp-content/themes/lorainccc/images/icons/icon-faculty_blue.svg)}
