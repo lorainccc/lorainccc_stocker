@@ -42,10 +42,9 @@
           <div class="row">
           <!-- This should be similar to what is generated when using Wordpress searchform.php -->
             <div id="mobile-search" class="small-12 medium-9 medium-offset-3 columns searchbox hide-for-print">
-                <form role="search"><?php 
-                        the_widget('WP_Widget_Search');
-                    ?>
-                </form>
+						<?php if ( is_active_sidebar( 'lccc-search-sidebar' ) ) { 
+																		dynamic_sidebar( 'lccc-search-sidebar' ); 
+										}		?>
             </div>
           </div>
       </div>
