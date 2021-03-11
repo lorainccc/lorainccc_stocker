@@ -120,16 +120,29 @@ $cost = event_meta_box_get_meta('event_meta_box_ticket_price_s_');
         <p><?php echo 'Time: '.$starttime; ?></p>
           <p><?php echo 'Location: '.$location; ?></p>
        	<?php if($cost != ''){ ?>
-							<p><?php echo 'Cost: '.$cost; ?></p>
+							<p><?php echo 'Price: '.$cost; ?></p>
 							<?php } ?>
 							<?php if($ticketlink != ''){ ?>
 								<a href="	<?php echo $ticketlink; ?>" class="buy-ticket-link">Buy Tickets</a>
 								<?php } ?>
 		</header><!-- .entry-header -->
+
+		<?php
+			$lc_event_id = event_meta_box_get_meta('event_meta_box_stocker_spektrix_event_id');
+
+			//echo $lc_event_id;
+
+			if( !empty( $lc_event_id ) ){				
+		?>
+			<a href="/stocker/choose-seats/?e=<?php echo $lc_event_id;  ?>" class="button buy-tickets" target="_blank">Buy Tickets</a>
+		<?php
+			}
+		?>
+
 	</div>
-	<div class="small-12 medium-12large-12 columns content-container">
+	<div class="small-12 medium-12 large-12 columns content-container">
 	<div class="entry-content">
-        <div class="small-12 medium-12large-12 columns nopadding">
+        <div class="small-12 medium-12 large-12 columns nopadding">
 		<?php
 			the_content();
 ?>
