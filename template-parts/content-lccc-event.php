@@ -128,7 +128,7 @@ $cost = event_meta_box_get_meta('event_meta_box_ticket_price_s_');
 		</header><!-- .entry-header -->
 
 		<?php
-			$lc_event_id = event_meta_box_get_meta('event_meta_box_stocker_spektrix_event_id');
+			$lc_event_id = event_meta_box_get_meta('event_meta_box_stocker_spektrix_event_instance_id');
 
 			//echo $lc_event_id;
 

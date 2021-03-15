@@ -200,6 +200,7 @@ function lorainccc_foundation_scripts() {
 	wp_enqueue_script( 'lc-hotjar-scripts', get_stylesheet_directory_uri() . '/js/lc-hotjar.js', array(), '20180828', false);
 	wp_enqueue_script( 'lc-siteimprove-scripts', get_stylesheet_directory_uri() . '/js/lc-siteimprove.js', array(), '20180828', false);
 	
+		wp_enqueue_script( 'lc-spektrix-iframe-script', 'https://ticketing.lorainccc.edu/stockerartscenter/website/scripts/integrate.js', array(), '20210315', false);
 		wp_localize_script( 'lorainccc-function-script', 'screenReaderText', array(
 		'expand'   => '<span class="screen-reader-text">' . __( 'expand child menu', 'twentyfifteen' ) . '</span>',
 		'collapse' => '<span class="screen-reader-text">' . __( 'collapse child menu', 'twentyfifteen' ) . '</span>',
