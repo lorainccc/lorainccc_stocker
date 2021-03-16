@@ -5,9 +5,10 @@
   *
   */
 
-  get_header();
+<html>
+  <head>
+  </head>
 
-the_post(); 
-the_content();
-
-get_footer();
+  <body>
+  </body>
+</html>
