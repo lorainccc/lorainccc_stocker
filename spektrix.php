@@ -78,7 +78,7 @@ get_header(); ?>
 						echo '    <iframe src="' . $url . 'Secure/MyAccount.aspx?' . $style . '&resize=true" onload="setTimeout(function(){ window.scrollTo(0,0);}, 100)" title="LCCC Stocker Art Center\'s MyAccount page in Spektrix"></iframe>';
 						break;
 					case "Checkout":
-						echo '    <iframe src="' . $url . 'Secure/Checkout.aspx?' . $style . '&resize=true" title="LCCC Stocker Art Center\'s Checkout page in Spektrix"></iframe>';
+						echo '    <iframe style="width:600px; min-height: 600px; border:0;" src="' . $url . 'Secure/Checkout.aspx?' . $style . '&resize=true" title="LCCC Stocker Art Center\'s Checkout page in Spektrix"></iframe>';
 						break;
 				}
 
