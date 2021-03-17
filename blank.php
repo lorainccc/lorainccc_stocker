@@ -4,7 +4,7 @@
   *  Template Name: Blank Page
   *
   */
-
+?>
 <html>
   <head>
   </head>
