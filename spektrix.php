@@ -69,7 +69,7 @@ get_header(); ?>
 
 				switch($iframeurl){
 					case "ChooseSeats":
-						echo '    <iframe src="' . $url . 'ChooseSeats.aspx?' . $style . '&resize=true&EventInstanceId=' . $lc_event_id .'" onload="setTimeout(function(){ window.scrollTo(0,0);}, 100)" title="LCCC Stocker Art Center\'s Choose Seats page in Spektrix"></iframe>';
+						echo '    <iframe style="width:600px; min-height: 600px; border:0;" src="' . $url . 'ChooseSeats.aspx?' . $style . '&resize=true&EventInstanceId=' . $lc_event_id .'" onload="setTimeout(function(){ window.scrollTo(0,0);}, 100)" title="LCCC Stocker Art Center\'s Choose Seats page in Spektrix"></iframe>';
 						break;
 					case "Basket":
 						echo '    <iframe src="' . $url . 'Basket2.aspx?' . $style . '&resize=true" onload="setTimeout(function(){ window.scrollTo(0,0);}, 100)" title="LCCC Stocker Art Center\'s Shopping Basket page in Spektrix"></iframe>';
