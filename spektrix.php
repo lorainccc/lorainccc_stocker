@@ -64,12 +64,11 @@ get_header(); ?>
 			//$url = 'https://system.spektrix.com/stockerartscenter_run1/website/';
 			$url = 'https://ticketing.lorainccc.edu/stockerartscenter/website/';
 
-
 				//echo '<div class="responsive-embed">';
 
 				switch($iframeurl){
 					case "ChooseSeats":
-						echo '    <iframe src="' . $url . 'ChooseSeats.aspx?' . $style . '&resize=true&EventInstanceId=' . $lc_event_id .'" onload="setTimeout(function(){ window.scrollTo(0,0);}, 100)" title="LCCC Stocker Art Center\'s Choose Seats page in Spektrix"></iframe>';
+						echo '    <iframe style="style="width: 100%; height: 1000px;" border:0;" src="' . $url . 'ChooseSeats.aspx?' . $style . '&resize=true&EventInstanceId=' . $lc_event_id .'" onload="setTimeout(function(){ window.scrollTo(0,0);}, 100)" title="LCCC Stocker Art Center\'s Choose Seats page in Spektrix"></iframe>';
 						break;
 					case "Basket":
 						echo '    <iframe src="' . $url . 'Basket2.aspx?' . $style . '&resize=true" onload="setTimeout(function(){ window.scrollTo(0,0);}, 100)" title="LCCC Stocker Art Center\'s Shopping Basket page in Spektrix"></iframe>';
@@ -78,7 +77,7 @@ get_header(); ?>
 						echo '    <iframe src="' . $url . 'Secure/MyAccount.aspx?' . $style . '&resize=true" onload="setTimeout(function(){ window.scrollTo(0,0);}, 100)" title="LCCC Stocker Art Center\'s MyAccount page in Spektrix"></iframe>';
 						break;
 					case "Checkout":
-						echo '    <iframe src="' . $url . 'Secure/Checkout.aspx?' . $style . '&resize=true" title="LCCC Stocker Art Center\'s Checkout page in Spektrix"></iframe>';
+						echo '    <iframe style="style="width: 100%; height: 1000px;" border:0;" src="' . $url . 'Secure/Checkout.aspx?' . $style . '&resize=true" title="LCCC Stocker Art Center\'s Checkout page in Spektrix"></iframe>';
 						break;
 				}
 
