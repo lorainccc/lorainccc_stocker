@@ -56,7 +56,8 @@ function lorainccc_setup() {
 		'stocker-left-nav' => esc_html__( 'Stocker Left Nav', 'lorainccc' ),
 		'about-menu' => esc_html__( 'About Menu', 'lorainccc' ),
 		'visual-art-menu' => esc_html__( 'Visual Art Menu', 'lorainccc' ),
-		'stocker-footer-quicklinks-menu' => esc_html__( 'Stocker Footer Quicklinks Menu', 'lorainccc' ),		
+		'stocker-footer-quicklinks-menu' => esc_html__( 'Stocker Footer Quicklinks Menu', 'lorainccc' ),
+		'stocker-header-shortcuts-menu' => esc_html__('Stocker Header Shortcuts Menu', 'lorainccc')		
 	) );
 	/*
 	 * Switch default core markup for search form, comment form, and comments

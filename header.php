@@ -32,11 +32,16 @@
         <div class="large-6 medium-6 columns">
           <div class="row">
             <div class="hide-for-small-only medium-12 columns">
-              <ul role="presentation" id="header-menu" class="menu align-right">
-                <li><a href="https://www.lorainccc.edu/" class="ql-icon ql-3" alt="Lorain County Community College Home" target="_blank">LCCC Home</a></li>
-                      <li><a href="https://www.lorainccc.edu/about/contact-lorain-county-community-college/" alt="Subscribe to Stocker Arts Center Mailiing List" class="ql-icon ql-2" target="_blank">Subscribe</a></li>
-                <li><a href="http://sa1.seatadvisor.com/sabo/servlets/EventSearch?presenter=STOCKER" alt="Buy Tickets" class="ql-icon ql-4">Buy Tickets</a></li>
-              </ul>
+            <?php
+                  wp_nav_menu(array(
+                    'container' => false,
+                    'menu' => __( 'Stocker Header Shortcuts Menu', 'lorainccc' ),
+                    'menu_class' => 'menu align-right',
+                    'theme_location' => 'stocker-header-shortcuts-menu',
+                    //'items_wrap'      => '<ul id="%1$s header-menu" class="%2$s">%3$s</ul>',
+                    'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+                  ));
+							?>
             </div>
           </div>  
           <div class="row">
