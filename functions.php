@@ -209,8 +209,20 @@ function lorainccc_foundation_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'lorainccc_foundation_scripts' );
 
+/**
+ * Enqueue google fonts.
+ */
+function add_google_fonts() {
+wp_enqueue_style( 'open-sans-google-fonts', 'https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic&dispay=swap', false );
+wp_enqueue_style( 'raleway-google-fonts', 'https://fonts.googleapis.com/css?family=Raleway:400,700&dispay=swap', false );
+
+}
+
+add_action( 'wp_enqueue_scripts', 'add_google_fonts' );
+
+
+
 function lorainccc_scripts() {
-		wp_enqueue_style( 'lccc-google-fonts', 'https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic|Raleway:400,400italic,700,700italic', false ); 
 
 	wp_enqueue_style( 'lorainccc-style', get_stylesheet_uri() );
 
