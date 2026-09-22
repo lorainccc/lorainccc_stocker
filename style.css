@@ -66,7 +66,7 @@ h2 {
   font-family: "Raleway", sans-serif;
 }
 h2.cta-h2 {
-  text-transform: uppercase;
+  text-transform:capitalize;
   font-family: "Raleway", sans-serif;
 }
 p {
@@ -162,7 +162,7 @@ p.stocker-month {
   color: #0c3b78;
   display: block;
   line-height: 100%;
-  text-transform: uppercase;
+  text-transform:capitalize;
   font-weight: 700;
   font-size: 1.4rem;
   margin-top: -0.5rem;
@@ -173,7 +173,7 @@ p.stocker-day {
   color: #0c3b78;
   display: block;
   line-height: 100%;
-  text-transform: uppercase;
+  text-transform:capitalize;
   font-weight: 700;
   font-size: 1.75rem;
 }
@@ -358,7 +358,7 @@ a.buy-tickets:hover {
   margin-top: 3rem;
 }
 .service-box-header h2 {
-  text-transform: uppercase;
+  text-transform:capitalize;
   font-weight: 700;
   color: #fefefe;
   font-size: 0.6875rem;
@@ -484,7 +484,7 @@ hr {
   padding: 0.5rem;
 }
 .sidebar-menu-header h3 {
-  text-transform: uppercase;
+  text-transform:capitalize;
   font-size: 1.125rem;
   font-weight: 700;
   margin-bottom: 0;
@@ -502,7 +502,7 @@ hr {
   font-weight: 800;
   color: #0055a5;
   margin-bottom: 0.25rem;
-  text-transform: uppercase;
+  text-transform:capitalize;
 }
 .recent-events a:not(.button),
 .announcements a:not(.button) {
@@ -524,7 +524,7 @@ hr {
   color: #0c3b78;
   display: block;
   line-height: 100%;
-  text-transform: uppercase;
+  text-transform:capitalize;
   font-weight: 700;
 }
 .recent-events .event .calendar-icon .month {
@@ -557,7 +557,7 @@ hr {
   color: #0c3b78;
   display: block;
   line-height: 100%;
-  text-transform: uppercase;
+  text-transform:capitalize;
   font-weight: 700;
 }
 .events-feed-item .calendar-icon .month {
@@ -647,7 +647,7 @@ hr {
 }
 .callout-link {
   color: #0055a5;
-  text-transform: uppercase;
+  text-transform:capitalize;
   font-size: 1.25rem;
   font-weight: 800;
   margin-bottom: 2rem;
@@ -716,7 +716,7 @@ hr {
 }
 .blue-panel h2 {
   color: #ffc600;
-  text-transform: uppercase;
+  text-transform:capitalize;
 }
 .blue-panel p {
   color: #fefefe;
@@ -1201,7 +1201,7 @@ footer {
 footer h2 {
   font-size: 0.75rem;
   color: #ffc600;
-  text-transform: uppercase;
+  text-transform:capitalize;
   font-weight: 700;
 }
 footer .menu > li > a {
