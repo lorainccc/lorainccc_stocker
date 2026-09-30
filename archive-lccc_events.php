@@ -112,7 +112,8 @@ get_header(); ?>
 					$wp_query = new WP_Query($eventargs);
 					if ( $wp_query->have_posts() ) :
 						while ( $wp_query->have_posts() ) : $wp_query->the_post();
-	$starteventdate = event_meta_box_get_meta('event_start_date');
+	
+		$starteventdate = event_meta_box_get_meta('event_start_date');
 		$starteventtime = event_meta_box_get_meta('event_start_time');  
 		$endeventdate = event_meta_box_get_meta('event_end_date');
 		$endtime = event_meta_box_get_meta('event_end_time');
@@ -135,10 +136,16 @@ get_header(); ?>
 		$location = event_meta_box_get_meta('event_meta_box_event_location');  
         	$cost = event_meta_box_get_meta('event_meta_box_ticket_price_s_');	
 		$key_1_value = get_post_meta( get_the_ID(), 'event_start_date', true );
+
+		$lc_learn_more_label = event_meta_box_get_meta('event_meta_box_learn_more');
+
+
 			?>
 <div id="post-<?php the_ID(); ?>" class="small-12 medium-12 large-12 columns nopadding">
 	<?php 
-if ( has_post_thumbnail() ) { ?>
+if ( has_post_thumbnail() ) { 
+	if( $post->event_end_date >= $currentdate ){
+	?>
 			<div class="small-12 medium-12 large-12 columns nopadding">
 					<a href="<?php the_permalink();?>"><?php the_title( '<h2 style="padding-left: 0.3rem;">', '</h2>' ); ?></a>
 			</div>
@@ -162,11 +169,21 @@ if ( has_post_thumbnail() ) { ?>
 			<div class="small-12 medium-12 large-12 columns nopadding">
 				<div class="entry-content">
 					<?php the_excerpt();?>
-					<a class="button" href="<?php the_permalink();?>">More Information</a>
+					<?php 
+					if($lc_learn_more_label != ''){
+						echo '<a class="button" href="https://www.lorainccc.edu/stocker/lccc_events/' . $post->post_name . '" title="' . $lc_learn_more_label . '">' . $lc_learn_more_label . '</a>'; ;
+					}else{
+						echo '<a class="button" href="https://www.lorainccc.edu/stocker/lccc_events/' . $post->post_name . '" title="Click for more information about' . $post->post_title . '">More About ' . $post->post_title . '</a>';
+					}?>
+
 				</div><!-- .entry-content -->
 			</div>
 			</div>
-	<?php }else{ ?>
+	<?php }
+			}else{ 
+				if( $post->event_end_date >= $currentdate ){
+
+				?>
 			<div class="small-12 medium-12 large-12 columns nopadding">
                         <header class="entry-header">
         <a href="<?php the_permalink();?>"><?php the_title( '<h2 class="entry-title">', '</h2>' ); ?></a>
@@ -182,11 +199,17 @@ if ( has_post_thumbnail() ) { ?>
 			<div class="small-12 medium-12 large-12 columns nopadding">
 				<div class="entry-content">
 					<?php the_excerpt();?>
-					<a class="button" href="<?php the_permalink();?>">More Information</a>
+					<?php 
+					if($lc_learn_more_label != ''){
+						echo '<a class="button" href="https://www.lorainccc.edu/stocker/lccc_events/' . $post->post_name . '" title="' . $lc_learn_more_label . '">' . $lc_learn_more_label . '</a>'; ;
+					}else{
+						echo '<a class="button" href="https://www.lorainccc.edu/stocker/lccc_events/' . $post->post_name . '" title="Click for more information about' . $post->title . '">More About ' . $post->title . '</a>';
+					}?>
 				</div><!-- .entry-content -->
 			</div>
 			</div>
-<?php }?>
+<?php }
+	}?>
 </div>
 
 			 <div class="column row event-list-row">

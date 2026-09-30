@@ -11,7 +11,7 @@
 
 	<footer id="colophon" class="small-12 medium-12 large-12 columns site-footer" role="contentinfo">
 		  <div class="row text-center medium-text-left">
-    <div class="large-4 medium-4 columns"> <img class="footer-logo" src="https://www.lorainccc.edu/stocker/wp-content/uploads/sites/69/2016/07/Stocker-Arts-Ctr-logo.svg" alt="LCCC Stocker Footer Logo" width="260" height="82.5"/>
+    <div class="large-4 medium-4 columns"> <img class="footer-logo" src="/wp-content/themes/lorainccc_stocker/images/Stocker-Arts-Ctr-reverse-footer-logo.png" alt="LCCC Stocker Footer Logo" width="260" height="82.5"/>
       <h2>Connect with Stocker</h2>
       <ul class="menu footer-sm-links">
         <li><a href="https://www.facebook.com/Stocker-Arts-Center-83843213363/?fref=ts" title="Follow Stocker Arts Center on Facebook"  target="_blank"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/icons/facebook_white.svg" height="30" width="30" alt="Follow Stocker Arts Center on Facebook" /></a></li>
@@ -24,14 +24,14 @@
       </a> 
       <?php if($_GET['siteurl'] == ''){ ?>
      <p class="website-feedback">
-      <a href="/website-feedback?siteurl=<?php echo 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']; ?>" title="Provide Feedback about this Page" target="_blank">Feedback about this page</a>
+      <a href="/website-feedback?siteurl=<?php echo 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']; ?>" title="" target="_blank">Feedback about this page</a>
      </p>
      <?php } ?>
       </div>
     <div class="large-4 medium-4 columns">
       <h2>Contact Stocker</h2>
       <p>Lorain County Community College<br />Stocker Arts Center<br />1005 N. Abbe Road<br />
-        Elyria, OH 44054<br />
+        Elyria, OH 44035<br />
        (440) 366-4040<br />
         <!--<a href="mailto:email@emailaddress.com">email@emailaddress.com</a>--> </p>
       <ul class="underline">
@@ -61,6 +61,20 @@
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
+<?php
+  switch($_SERVER['SERVER_ADDR']){
+    case "172.25.1.201":
+      echo "<!-- Prod 1a | 24.04-->";
+    break;
 
+    case "172.25.7.211":
+      echo "<!-- Prod 1b | 24.04-->";
+    break;
+
+    default:
+      echo $_SERVER['SERVER_ADDR'];
+    break;
+  }
+?>
 </body>
 </html>

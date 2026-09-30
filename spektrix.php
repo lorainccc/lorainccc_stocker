@@ -57,7 +57,12 @@ get_header(); ?>
 
 			if($_GET['e'] !== ''){
 				$lc_temp_event_id = $_GET['e'];
-				$lc_event_id = substr($lc_temp_event_id, 0, 4);
+				$lc_event_id = substr($lc_temp_event_id, 0, 5);
+
+				if( !is_numeric( $lc_event_id ) ){
+					$lc_event_id = substr($lc_event_id, 0, 4);
+				}
+
 			}
 
             if($iframeurl != '') {
@@ -78,6 +83,9 @@ get_header(); ?>
 						break;
 					case "Checkout":
 						echo '    <iframe style="width: 100%; border:0;" src="' . $url . 'Secure/Checkout.aspx?' . $style . '&resize=true" name="SpektrixIFrame" id="SpektrixIFrame" title="LCCC Stocker Art Center\'s Checkout page in Spektrix"></iframe>';
+						break;
+					case "Subscriptions":
+						echo '    <iframe style="width: 100%; border:0;" src="' . $url . 'TicketSubscriptions?' . $style . '&resize=true" name="SpektrixIFrame" id="SpektrixIFrame" title="LCCC Stocker Art Center\'s Ticket Subscriptions page in Spektrix"></iframe>';
 						break;
 				}
 

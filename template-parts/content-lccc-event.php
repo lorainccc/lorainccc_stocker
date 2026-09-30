@@ -123,7 +123,7 @@ $cost = event_meta_box_get_meta('event_meta_box_ticket_price_s_');
 							<p><?php echo 'Price: '.$cost; ?></p>
 							<?php } ?>
 							<?php if($ticketlink != ''){ ?>
-								<a href="	<?php echo $ticketlink; ?>" class="buy-ticket-link">Buy Tickets</a>
+								<a href="<?php echo $ticketlink; ?>" class="buy-ticket-link">Buy Tickets</a>
 								<?php } ?>
 		</header><!-- .entry-header -->
 

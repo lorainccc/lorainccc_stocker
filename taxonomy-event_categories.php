@@ -87,15 +87,14 @@ if ($query->have_posts()):
         // Start the Loop
         while ( $query->have_posts() ) : $query->the_post();
 
-  $starteventdate =
-			event_meta_box_get_meta('event_start_date');
+  		$starteventdate =	event_meta_box_get_meta('event_start_date');
 		$starteventtime = event_meta_box_get_meta('event_start_time');
 		$endeventdate = event_meta_box_get_meta('event_end_date');
 		$endtime = event_meta_box_get_meta('event_end_time');
 
 
 										$starttimevar=strtotime($starteventtime);
-										$starttime=	date("h:i a",$starttimevar);
+										$starttime=	date("g:i a",$starttimevar);
 										$starteventtimehours = date("G",$starttimevar);
 										$starteventtimeminutes = date("i",$starttimevar);
 
@@ -107,7 +106,7 @@ if ($query->have_posts()):
                                         $eventstartyear =date("Y",$startdate);
 
 										$endeventtimevar=strtotime($endtime);
-										$endeventtime = date("h:i a",$endeventtimevar);
+										$endeventtime = date("g:i a",$endeventtimevar);
 										$endeventtimehours = date("G",$endeventtimevar);
 										$endeventtimeminutes = date("i",$endeventtimevar);
 
@@ -135,6 +134,8 @@ if ($query->have_posts()):
 
 $location = event_meta_box_get_meta('event_meta_box_event_location');
 $cost = event_meta_box_get_meta('event_meta_box_ticket_price_s_');
+		$lc_learn_more_label = event_meta_box_get_meta('event_meta_box_learn_more');
+
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<?php 
@@ -162,10 +163,14 @@ if ( has_post_thumbnail() ) { ?>
 	<div class="small-12 medium-12 large-12 columns nopadding">
 	<div class="entry-content">
 		<?php
-			the_excerpt();
-		?>
-	<a href="<?php the_permalink();?>">More Information</a>
-		<?php
+			the_excerpt(); 
+			
+			if($lc_learn_more_label != ''){
+				echo '<a class="button" href="https://www.lorainccc.edu/stocker/lccc_events/' . $post->post_name . '" title="' . $lc_learn_more_label . '">' . $lc_learn_more_label . '</a>'; ;
+			}else{
+				echo '<a class="button" href="https://www.lorainccc.edu/stocker/lccc_events/' . $post->post_name . '" title="Click for more information about' . $post->post_title . '">More About ' . $post->post_title . '</a>';
+			}
+		
 			wp_link_pages( array(
 				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'lorainccc' ),
 				'after'  => '</div>',

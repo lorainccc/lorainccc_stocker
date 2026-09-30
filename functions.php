@@ -194,17 +194,29 @@ function lorainccc_foundation_scripts() {
 
 		wp_enqueue_script( 'lorainccc-function-script', get_stylesheet_directory_uri() . '/js/functions.js', array( 'jquery' ), '20150330', true );
 		wp_enqueue_script( 'lc_menu-cleanup-script', get_stylesheet_directory_uri() . '/js/menu-cleanup.js', array( 'jquery' ), '20190329', true );
-	//Adds Google Analytics, Google Tag, Hotjar and Eloqua to header
+	// Adds Google Analytics, Google Tag, Hotjar and Eloqua to header
 	wp_enqueue_script( 'lc-eloqua-scripts', get_stylesheet_directory_uri() . '/js/lc-eloqua.js', array(), '20180828', false);
-	wp_enqueue_script( 'lc-google-analytics-scripts', get_stylesheet_directory_uri() . '/js/lc-google-analytics.js', array(), '20180828', false);
+	wp_enqueue_script( 'lc-google-analytic-parent-async', 'https://www.googletagmanager.com/gtag/js?id=G-Z27HB3ECDG', array(), '20221117', false); 
+	wp_enqueue_script( 'lc-google-analytics-scripts', get_stylesheet_directory_uri() . '/js/lc-google-analytics.js', array( 'lc-google-analytic-parent-async' ), '20180828', false);
 	wp_enqueue_script( 'lc-google-tag-scripts', get_stylesheet_directory_uri() . '/js/lc-google-tag.js', array(), '20180828', false);
 	wp_enqueue_script( 'lc-hotjar-scripts', get_stylesheet_directory_uri() . '/js/lc-hotjar.js', array(), '20180828', false);
 	wp_enqueue_script( 'lc-siteimprove-scripts', get_stylesheet_directory_uri() . '/js/lc-siteimprove.js', array(), '20180828', false);
+
+	// Load the Web Components File for just the Stocker Merch CPT
+	if ( get_post_type() == 'lc_stocker_merch' ) {
+
+		// Use above for all CPT calls
+
+		// Use below if just accessing CPT output for adding too basket with single template
+		// is_singular( 'lc_stocker_merch' )
+		
+		wp_enqueue_script( 'lc-spektrix-component-loader', 'https://webcomponents.spektrix.com/stable/spektrix-component-loader.js', array(), '20250702', array( 'strategy' => 'async' ) );
+	}
 	
-		wp_enqueue_script( 'lc-spektrix-iframe-script', 'https://ticketing.lorainccc.edu/stockerartscenter/website/scripts/integrate.js', array(), '20210315', false);
-		wp_localize_script( 'lorainccc-function-script', 'screenReaderText', array(
-		'expand'   => '<span class="screen-reader-text">' . __( 'expand child menu', 'twentyfifteen' ) . '</span>',
-		'collapse' => '<span class="screen-reader-text">' . __( 'collapse child menu', 'twentyfifteen' ) . '</span>',
+	wp_enqueue_script( 'lc-spektrix-iframe-script', 'https://ticketing.lorainccc.edu/stockerartscenter/website/scripts/integrate.js', array(), '20210315', false);
+	wp_localize_script( 'lorainccc-function-script', 'screenReaderText', array(
+	'expand'   => '<span class="screen-reader-text">' . __( 'expand child menu', 'twentyfifteen' ) . '</span>',
+	'collapse' => '<span class="screen-reader-text">' . __( 'collapse child menu', 'twentyfifteen' ) . '</span>',
 	) );
 	
 }
@@ -350,5 +362,32 @@ $role = get_role('editor');
 $role->remove_cap('publish_posts');
 $role->remove_cap('publish_pages');
 
+
+//Disable block editor for LCCC Custom Post Types
+
+if ( is_admin() ):
+    add_filter( 'use_block_editor_for_post', 'lc_disable_block_for_post_type', 10, 2 );
+endif;
+
+function lc_disable_block_for_post_type( $bool, $post ) {
+	$lc_posttypes = array('lccc_events', 'lccc_announcement', 'sponsor', 'lc_program_paths', 'badges', 'lc_success_story', 'lccc_podcasts', 'content_group', 'gateway_menu', 'faculty_staff_dir', 'lc_content_tile', 'crime_log', 'lc_stocker_merch' );
+
+    if ( in_array($post->post_type, $lc_posttypes ) ):
+        return false;
+    endif;
+
+    return $bool;
+}
+
+/** Disable Caching of RankMath Sitemaps
+*
+*	RankMath SiteMap files are being cached in transients in the WordPress Database
+*	adding the filter below removes the files from cache.
+*
+*	Added by JAQ 2/2026
+*	https://rankmath.com/kb/exclude-sitemaps-from-caching/
+*/
+
+add_filter( 'rank_math/sitemap/enable_caching', '__return_false');
 
 ?>

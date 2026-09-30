@@ -57,7 +57,21 @@ get_header();
 															<?php the_excerpt('<p>','</p>');?>
 													</div>
 													<div class="small-12 medium-12 large-12 columns highlight-link">
-																<a href="<?php echo esc_url( get_permalink() ); ?>" class="button">Learn More</a>
+														<?php if( get_post_meta( get_the_ID(), 'lc_stocker_custom_learn_more_field', true) ) {
+															?>
+
+															<a href="<?php echo esc_url( get_permalink() ); ?>" class="button"><?php echo get_post_meta( get_the_ID(), 'lc_stocker_custom_learn_more_field', true); ?></a>
+
+															<?php
+														}else{
+															?>
+
+															<a href="<?php echo esc_url( get_permalink() ); ?>" class="button">Learn More About <?php echo the_title(); ?></a>
+															
+															<?php
+														};  ?>
+														
+																
 													</div>
 									</div>					
 					</div>
@@ -95,9 +109,9 @@ get_header();
 															$stocker_annoucnement_query->the_post();
 															 echo '<div class="small-12 medium-12 large-12 columns sub-announcement-container">';
 																		echo '<div class="small-12 medium-12 large-12 columns">';?>
-																				<a class="announcement-title-link" href="<?php the_permalink(); ?>">
+																				<h3><a class="announcement-title-link" href="<?php the_permalink(); ?>">
 																					<?php the_title(); ?>
-																				</a>
+																				</a></h3>
 																				<?php
 																					the_excerpt('<p>','</p>');
 																	echo '</div>';
