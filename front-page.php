@@ -45,36 +45,38 @@ get_header();
 					if ( $newstockerhighlights->have_posts() ) :
 							while ( $newstockerhighlights->have_posts() ) : $newstockerhighlights->the_post();
 						?>		
-				<div class="small-12 medium-12 large-12 columns stocker-highlight-container">
-				   <div class="small-12 medium-6 large-6 columns highlight-image">
-					<a href="<?php echo esc_url( get_permalink() ); ?>"><?php the_post_thumbnail(); ?></a>
-				   </div>
-				<div class="small-12 medium-6 large-6 columns highlight-text">
-													<div class="small-12 medium-12 large-12 columns highlight-header">
-																<?php the_title('<h3>','</h3>');?>
-													</div>
-													<div class="small-12 medium-12 large-12 columns highlight-content">
-															<?php the_excerpt('<p>','</p>');?>
-													</div>
-													<div class="small-12 medium-12 large-12 columns highlight-link">
-														<?php if( get_post_meta( get_the_ID(), 'lc_stocker_custom_learn_more_field', true) ) {
-															?>
+							<section aria-labeledby="<?php echo strtolower(the_title()) . "-section" ?>">
+								<div class="small-12 medium-12 large-12 columns stocker-highlight-container">
+									<div class="small-12 medium-6 large-6 columns highlight-image">
+										<a href="<?php echo esc_url( get_permalink() ); ?>"><?php the_post_thumbnail(); ?></a>
+									</div>
+									<div class="small-12 medium-6 large-6 columns highlight-text">
+										<div class="small-12 medium-12 large-12 columns highlight-header">
+													<?php the_title('<h3>','</h3>');?>
+										</div>
+										<div class="small-12 medium-12 large-12 columns highlight-content">
+												<?php the_excerpt('<p>','</p>');?>
+										</div>
+										<div class="small-12 medium-12 large-12 columns highlight-link">
+											<?php if( get_post_meta( get_the_ID(), 'lc_stocker_custom_learn_more_field', true) ) {
+												?>
 
-															<a href="<?php echo esc_url( get_permalink() ); ?>" class="button"><?php echo get_post_meta( get_the_ID(), 'lc_stocker_custom_learn_more_field', true); ?></a>
+												<a href="<?php echo esc_url( get_permalink() ); ?>" class="button"><?php echo get_post_meta( get_the_ID(), 'lc_stocker_custom_learn_more_field', true); ?></a>
 
-															<?php
-														}else{
-															?>
+												<?php
+											}else{
+												?>
 
-															<a href="<?php echo esc_url( get_permalink() ); ?>" class="button">Learn More About <?php echo the_title(); ?></a>
-															
-															<?php
-														};  ?>
-														
-																
-													</div>
+												<a href="<?php echo esc_url( get_permalink() ); ?>" class="button">Learn More About <?php echo the_title(); ?></a>
+												
+												<?php
+											};  ?>
+											
+													
+										</div>
 									</div>					
-					</div>
+								</div>
+							</section>
 					<?php
 						endwhile;
 					endif;
