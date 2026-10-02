@@ -45,7 +45,7 @@ get_header();
 					if ( $newstockerhighlights->have_posts() ) :
 							while ( $newstockerhighlights->have_posts() ) : $newstockerhighlights->the_post();
 						?>		
-							<section aria-labeledby="<?php echo strtolower(the_title()) . "-section" ?>">
+							<section aria-labeledby="<?php echo $post->post_name . "-section" ?>">
 								<div class="small-12 medium-12 large-12 columns stocker-highlight-container">
 									<div class="small-12 medium-6 large-6 columns highlight-image">
 										<a href="<?php echo esc_url( get_permalink() ); ?>"><?php the_post_thumbnail(); ?></a>
