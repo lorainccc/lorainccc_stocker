@@ -10,7 +10,7 @@ get_header(); ?>
 <div class="small-12 medium-12 large-12 columns breadcrumb-container">
    <?php get_template_part( 'template-parts/content', 'breadcrumb' ); ?>
 </div>
-<div class="medium-4 large-4 columns hide-for-small-only">
+<div class="medium-4 large-4 columns hide-for-small-only" role="region" aria-label="side menu" >
 	<div class="small-12 medium-12 large-12 columns sidebar-widget">
 		<div class="small-12 medium-12 large-12 columns sidebar-menu-header">
 		<h3>Stocker Arts Center</h3>
