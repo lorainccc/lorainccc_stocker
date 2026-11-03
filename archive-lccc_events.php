@@ -39,7 +39,7 @@ get_header(); ?>
 </div>
 <div class="medium-4 large-4 columns hide-for-small-only">
 	<div class="small-12 medium-12 large-12 columns sidebar-widget">
-		<div class="small-12 medium-12 large-12 columns sidebar-menu-header">
+		<div class="small-12 medium-12 large-12 columns sidebar-menu-header" role="region" aria-label="side menu">
 <h3><?php echo bloginfo('the-title'); ?></h3>
 		</div>
 	<?php	if ( has_nav_menu( 'stocker-left-nav' ) ) : ?>
