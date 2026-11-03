@@ -66,7 +66,7 @@
     </div>
   </div>
   <div id="responsive-menu" class="medium-blue-bg">
-    <nav id="primary-menu" class="menu-centered">
+    <nav id="main-mobile-menu" class="menu-centered">
       <?php
           wp_nav_menu(array(
           'container' => false,
